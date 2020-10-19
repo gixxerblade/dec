@@ -9,3 +9,13 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.home-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+.intro {
+  text-align: center;
+}

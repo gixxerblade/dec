@@ -1,13 +1,14 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Dec from "../../icons"
 
 const Header = ({ siteTitle }) => (
   <header className="container">
     <div className="inner-container">
       <h1 className="title-container">
         <Link className="site-title" to="/">
-          {siteTitle}
+          {<Dec width={300} /> || siteTitle}
         </Link>
       </h1>
     </div>

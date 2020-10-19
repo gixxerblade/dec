@@ -7,9 +7,16 @@ const Home = () => (
     <Splash />
     <SEO title="Home" />
     <Layout>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
+      <div className="home-container">
+        <h1>Down East Cyclists</h1>
+        <h2>A Recreational Cycling Club in Eastern North Carolina</h2>
+        <p className="intro">
+          Down East Cyclists are a group of like-minded people interested in the
+          promotion of safe cycling in eastern NC. The club has annual elections
+          to appoint officers, and monthly meetings to both inform and listen to
+          members.
+        </p>
+      </div>
     </Layout>
   </>
 )
