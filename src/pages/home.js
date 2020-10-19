@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Dec from "../icons"
 import Splash from "./splash"
 const Home = () => (
   <>
@@ -8,7 +9,13 @@ const Home = () => (
     <SEO title="Home" />
     <Layout>
       <div className="home-container">
-        <h1>Down East Cyclists</h1>
+        <Dec
+          shadow="#000"
+          details="#000"
+          cyclists="#000"
+          width={400}
+          height={200}
+        />
         <h2>A Recreational Cycling Club in Eastern North Carolina</h2>
         <p className="intro">
           Down East Cyclists are a group of like-minded people interested in the

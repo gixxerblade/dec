@@ -24,12 +24,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `Down East Cyclists`}
+      />
       <div className="main">
         <main>{children}</main>
         <footer
           style={{
             marginTop: `2rem`,
+            position: "fixed",
+            bottom: "0",
+            fontSize: ".8rem",
           }}
         >
           © {new Date().getFullYear()}, Built by

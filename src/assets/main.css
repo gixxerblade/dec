@@ -10,11 +10,18 @@ body {
   height: 100vh;
 }
 .home-container {
+  margin: 5rem;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: auto;
+}
+.home-container h2 {
+  font-size: 1.4rem;
+}
+.home-container p {
+  width: 65%;
 }
 .intro {
   text-align: center;
