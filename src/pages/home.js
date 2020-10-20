@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Dec from "../icons"
 import Splash from "./splash"
+
 const Home = () => (
   <>
     <Splash />
@@ -13,8 +14,8 @@ const Home = () => (
           shadow="#000"
           details="#000"
           cyclists="#000"
-          width={400}
-          height={200}
+          width={'75vw'}
+          height={'auto'}
         />
         <h2>A Recreational Cycling Club in Eastern North Carolina</h2>
         <p className="intro">
