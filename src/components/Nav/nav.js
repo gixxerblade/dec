@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import Dec from "../../icons"
 const Nav = ({ siteTitle }) => {
+  const [isActive, setIsActive] = useState(false)
   return (
     <nav
       className="navbar has-background-dark"
@@ -9,8 +10,11 @@ const Nav = ({ siteTitle }) => {
       aria-label="main navigation"
     >
       <div
+        onClick={() => setIsActive(!isActive)}
         role="button"
-        className="navbar-burger burger"
+        className={`navbar-burger burger has-text-light are-large ${
+          isActive ? "is-active" : ""
+        }`}
         aria-label="menu"
         aria-expanded="false"
         data-target="navbarBasicExample"
@@ -20,9 +24,9 @@ const Nav = ({ siteTitle }) => {
         <span aria-hidden="true"></span>
       </div>
       <div className="navbar-brand">
-        {<Dec width="13rem" /> || <h1>siteTitle</h1>}
+        {<Dec width="13rem" /> || <h1>{siteTitle}</h1>}
       </div>
-      <div className="navbar-menu">
+      <div className={`navbar-menu ${isActive ? "is-active has-background-dark" : ""}`}>
         <div className="navbar-end">
           <Link className="navbar-item" to="/">
             Home

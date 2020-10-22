@@ -18,3 +18,16 @@ $title-color: #fff;
 .navbar-link:hover {
   color: $black;
 }
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: relative;
+    height: 5rem;
+  }
+  .navbar-brand {
+    display: inline;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+}
