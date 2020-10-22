@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+// If need, change your variables before importing Bulma
+$title-color: #fff;
+
+@import "~bulma/bulma.sass";
+
+.navbar-item:hover {
+  color: $black;
+}
+.navbar-item,
+.navbar-link {
+  color: $white-bis;
+}
+.about-dropdown {
+  color: $black;
+}
+.navbar-link:hover {
+  color: $black;
+}

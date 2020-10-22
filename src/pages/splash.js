@@ -1,6 +1,5 @@
 import React from "react"
 import YouTube from "react-youtube"
-import "../assets/main.css"
 const Splash = () => {
   const playVideo = event => {
     event.target.playVideo()

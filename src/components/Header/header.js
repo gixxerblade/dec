@@ -1,19 +1,19 @@
+import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 import Dec from "../../icons"
 
-const Header = ({ siteTitle }) => (
-  <header className="container">
-    <div className="inner-container">
-      <h1 className="title-container">
-        <Link className="site-title" to="/">
-          {<Dec width={300} /> || siteTitle}
+const Header = ({ siteTitle }) => {
+  return (
+    <header className="container is-fluid has-background-dark">
+      <h1 className="title is-1 has-text-centered">
+        <Link to="/">
+          {<Dec className="navbar-brand" width="15rem" /> || siteTitle}
         </Link>
       </h1>
-    </div>
-  </header>
-)
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

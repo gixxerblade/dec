@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 const Dec = ({ height, width, shadow, cyclists, details, red }) => {
   return (
     <svg
+      className="dec-logo"
       viewBox="0 0 1326.667 513.333"
       height={height}
       width={width}
