@@ -28,7 +28,9 @@ const Home = () => (
               <div className="title is-size-4	has-text-dark">
                 Down East Cyclists Facebook
               </div>
-              <iframe 
+              <iframe
+                width="500"
+                height="600"
                 title="facebook feed"
                 className="facebook"
                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdowneastcyclists&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=593868267388583"

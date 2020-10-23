@@ -35,7 +35,7 @@ $title-color: #fff;
   color: #fff;
 }
 // * Don't show youtube video on mobile
-@media screen and (max-width: 411px) {
+@media screen and (min-width: 320px) and (max-width: 411px) and (min-device-width: 320px) and (max-device-width: 480px) {
   .youtube {
     display: none;
   }
@@ -45,17 +45,17 @@ $title-color: #fff;
     color: $white-ter;
   }
 }
-.facebook {
+/* .facebook {
   width: 500px;
   height: 600px;
 }
+ */
 @media screen and (max-width: 560px) {
   .fb-container {
     display: flex;
     flex-flow: column nowrap;
   }
   .facebook {
-    flex-shrink: 1;
     width: 100%;
   }
 }
