@@ -5,7 +5,7 @@ const Nav = ({ siteTitle }) => {
   const [isActive, setIsActive] = useState(false)
   return (
     <nav
-      className="navbar has-background-dark"
+      className="navbar has-background-dark is-fluid"
       role="navigation"
       aria-label="main navigation"
     >
@@ -28,6 +28,7 @@ const Nav = ({ siteTitle }) => {
         {<Dec width="13rem" /> || <h1>{siteTitle}</h1>}
       </div>
       <div
+        onClick={() => setIsActive(!isActive)}
         className={`navbar-menu ${
           isActive ? "is-active has-background-dark" : ""
         }`}

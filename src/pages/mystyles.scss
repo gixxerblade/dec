@@ -45,3 +45,17 @@ $title-color: #fff;
     color: $white-ter;
   }
 }
+.facebook {
+  width: 500px;
+  height: 600px;
+}
+@media screen and (max-width: 560px) {
+  .fb-container {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .facebook {
+    flex-shrink: 1;
+    width: 100%;
+  }
+}
