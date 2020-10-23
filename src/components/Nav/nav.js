@@ -11,6 +11,7 @@ const Nav = ({ siteTitle }) => {
     >
       <div
         onClick={() => setIsActive(!isActive)}
+        onKeyDown={() => setIsActive(!isActive)  }
         role="button"
         className={`navbar-burger burger has-text-light are-large ${
           isActive ? "is-active" : ""
@@ -26,7 +27,11 @@ const Nav = ({ siteTitle }) => {
       <div className="navbar-brand">
         {<Dec width="13rem" /> || <h1>{siteTitle}</h1>}
       </div>
-      <div className={`navbar-menu ${isActive ? "is-active has-background-dark" : ""}`}>
+      <div
+        className={`navbar-menu ${
+          isActive ? "is-active has-background-dark" : ""
+        }`}
+      >
         <div className="navbar-end">
           <Link className="navbar-item" to="/">
             Home

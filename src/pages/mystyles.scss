@@ -28,6 +28,15 @@ $title-color: #fff;
     position: absolute;
     z-index: 1;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+  }
+}
+.is-active + .navbar-item {
+  color: #fff;
+}
+// * Don't show youtube video on mobile
+@media screen and (max-width: 411px) {
+  .youtube {
+    display: none;
   }
 }

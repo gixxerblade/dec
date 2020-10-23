@@ -8,7 +8,6 @@
 import React, { useEffect, useState, useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./Header"
 import Nav from "./Nav"
 import "../assets/layout.scss"
 
