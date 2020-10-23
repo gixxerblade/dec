@@ -59,9 +59,12 @@ $title-color: #fff;
     width: 100%;
   }
 }
-.footer:before {
-  margin: 3px 0px;
-  outline: 1px solid black;
+footer .columns h1 {
+  text-decoration: underline;
+  text-align: center;
+}
+.footer {
+background-color: $light;
 }
 .social-container {
   display: flex;

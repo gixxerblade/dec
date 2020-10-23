@@ -6,14 +6,15 @@ import {
   BicycleShop,
   CapeFearCyclists,
   CapeFearSorba,
+  Icons,
 } from "../../icons"
 const Footer = () => {
   return (
     <>
-      <footer className="section">
+      <footer className="section has-text-grey has-background-light">
         <div className="columns">
           <div className="column">
-            <h1 className="heading is-size-3 has-text-centered">Connect</h1>
+            <h1 className="heading is-size-3 has-text-centered has-text-weight-bold">Connect</h1>
             <div className="social-container">
               <FacebookCircle
                 title="Facebook"
@@ -24,21 +25,29 @@ const Footer = () => {
             </div>
           </div>
           <div className="column">
-            <h1 className="heading is-size-3 has-text-centered">Links</h1>
+            <h1 className="heading is-size-3 has-text-centered has-text-weight-bold	">Links</h1>
             <div className="columns has-text-centered is-center">
               <div className="column">
                 <a href="https://www.bicycle-gallery.com/">
-                  <BicycleGallery />
+                  <StyledIcon>
+                    <BicycleGallery />
+                  </StyledIcon>
                 </a>
               </div>
               <div className="column">
-                <BicycleShop />
+                <StyledIcon>
+                  <BicycleShop />
+                </StyledIcon>
               </div>
               <div className="column">
-                <CapeFearCyclists />
+                <StyledIcon>
+                  <CapeFearCyclists />
+                </StyledIcon>
               </div>
               <div className="column">
-                <CapeFearSorba />
+                <StyledIcon>
+                  <CapeFearSorba />
+                </StyledIcon>
               </div>
             </div>
           </div>
@@ -53,3 +62,13 @@ const Footer = () => {
   )
 }
 export default Footer
+
+const StyledIcon = styled(Icons)`
+  svg {
+    fill: $black;
+    &:hover {
+      transition: 0.2s linear;
+      fill: #ef1a25;
+    }
+  }
+`
