@@ -25,27 +25,19 @@ const Home = () => (
               </div>
             </div>
             <div className="column has-text-centered">
-              <div
-                className="has"
-                class="fb-page"
-                data-href="https://www.facebook.com/downeastcyclists"
-                data-tabs="timeline"
-                data-width="500"
-                data-height="300"
-                data-small-header="true"
-                data-adapt-container-width="true"
-                data-hide-cover="true"
-                data-show-facepile="true"
-              >
-                <blockquote
-                  cite="https://www.facebook.com/downeastcyclists"
-                  class="fb-xfbml-parse-ignore"
-                >
-                  <a href="https://www.facebook.com/downeastcyclists">
-                    Down East Cyclists
-                  </a>
-                </blockquote>
+              <div className="title is-size-4	has-text-dark">
+                Down East Cyclists Facebook
               </div>
+              <iframe title="facebook feed"
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdowneastcyclists&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=593868267388583"
+                width="500"
+                height="600"
+                style={{ border: "none", overflow: "hidden" }}
+                scrolling="no"
+                frameborder="0"
+                allowTransparency="true"
+                allow="encrypted-media"
+              ></iframe>
             </div>
           </div>
         </div>

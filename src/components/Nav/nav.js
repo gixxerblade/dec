@@ -11,7 +11,7 @@ const Nav = ({ siteTitle }) => {
     >
       <div
         onClick={() => setIsActive(!isActive)}
-        onKeyDown={() => setIsActive(!isActive)  }
+        onKeyDown={() => setIsActive(!isActive)}
         role="button"
         className={`navbar-burger burger has-text-light are-large ${
           isActive ? "is-active" : ""

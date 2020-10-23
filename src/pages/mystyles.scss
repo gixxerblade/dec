@@ -40,3 +40,8 @@ $title-color: #fff;
     display: none;
   }
 }
+@media screen and (max-width: 1024px) {
+  a.navbar-item.about-dropdown {
+    color: $white-ter;
+  }
+}
