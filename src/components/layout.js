@@ -9,6 +9,7 @@ import React, { useEffect, useState, useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Nav from "./Nav"
+import Footer from "./Footer"
 import "../assets/layout.scss"
 
 const Layout = ({ children }) => {
@@ -48,18 +49,7 @@ const Layout = ({ children }) => {
       </div>
       <div className="container">
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-            position: "sticky",
-            bottom: "0",
-            fontSize: ".8rem",
-          }}
-        >
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="https://www.stephenclark.dev">SC</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )

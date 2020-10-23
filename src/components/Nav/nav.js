@@ -40,17 +40,23 @@ const Nav = ({ siteTitle }) => {
           <div className="navbar-item has-dropdown is-hoverable">
             <div className="navbar-link">About</div>
             <div className="navbar-dropdown">
-              <Link className="navbar-item about-dropdown" to="/leadership">
+              <Link className="navbar-item dropdowns-a" to="/leadership">
                 Leadership
               </Link>
               <a
-                className="navbar-item about-dropdown"
+                className="navbar-item dropdowns-a"
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://www.downeastcyclists.com/about/membership/"
               >
                 Membership
               </a>
+              <Link className="navbar-item dropdowns-a" to="/bylaws">
+                By Laws
+              </Link>
+              <Link className="navbar-item dropdowns-a" to="/privacy">
+                Privacy Policy
+              </Link>
             </div>
           </div>
           <Link className="navbar-item" to="/events">
@@ -59,9 +65,17 @@ const Nav = ({ siteTitle }) => {
           <Link className="navbar-item" to="/news">
             News
           </Link>
-          <Link className="navbar-item" to="/mtb">
-            MTB Trails
-          </Link>
+          <div className="navbar-item has-dropdown is-hoverable">
+            <div className="navbar-link">MTB Trails</div>
+            <div className="navbar-dropdown">
+              <Link className="navbar-item dropdowns-a" to="/hendo">
+                Hendo
+              </Link>
+              <Link className="navbar-item dropdowns-a" to="/commons">
+                Commons
+              </Link>
+            </div>
+          </div>
           <Link className="navbar-item" to="/contact">
             Contact
           </Link>

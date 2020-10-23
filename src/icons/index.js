@@ -1,2 +1,6 @@
 export { default } from "./Dec"
 export { default as Logo } from "./Logo"
+export { default as BicycleGallery } from "./BicycleGallery"
+export { default as BicycleShop } from "./BicycleShop"
+export { default as CapeFearCyclists } from "./CapeFearCyclists"
+export { default as CapeFearSorba } from "./CapeFearSorba"
