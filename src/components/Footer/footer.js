@@ -86,11 +86,22 @@ const Footer = () => {
                 })}
             </div>
           </div>
-            <div className="column">
-              <h1 className="heading is-size-4 has-text-centered has-text-weight-bold	">
-                Weekly Mileage
-              </h1>
+          <div className="column">
+            <h1 className="heading is-size-4 has-text-centered has-text-weight-bold	">
+              Weekly Mileage
+            </h1>
+            <div className="has-text-centered">
+              <iframe
+                height="160"
+                width="300"
+                frameborder="0"
+                allowTransparency="true"
+                scrolling="no"
+                loading="lazy"
+                src="https://www.strava.com/clubs/down-east-cyclists/latest-rides/8683108f61f96a7b5c9c472f4176a0b942b74964?show_rides=false"
+              ></iframe>
             </div>
+          </div>
         </div>
         <div className="copyright">
           <h2 className="heading">
@@ -112,25 +123,3 @@ const StyledIcon = styled(Icons)`
     }
   }
 `
-/* 
-                <a href="https://www.bicycle-gallery.com/">
-                  <StyledIcon>
-                    <BicycleGallery title="Bicycle Gallery" />
-                  </StyledIcon>
-                </a>
-              </div>
-              <div className="column">
-                <StyledIcon>
-                  <BicycleShop title="Bicycle Shop" />
-                </StyledIcon>
-              </div>
-              <div className="column">
-                <StyledIcon title="Cape Fear Cyclists">
-                  <CapeFearCyclists />
-                </StyledIcon>
-              </div>
-              <div className="column">
-                <StyledIcon>
-                  <CapeFearSorba title="Cape Fear Sorba" />
-                </StyledIcon>
-*/
