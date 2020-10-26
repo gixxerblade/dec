@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Down East Cyclists`,
     description: `A Recreational Cycling Club in Eastern North Carolina`,
-    author: `@gixxerblade`,
+    author: `Stephen Clark <sdclarkie@gmail.com>`,
   },
   plugins: [
     `gatsby-plugin-sass`,

@@ -14,7 +14,7 @@ exports.onRenderBody = ({ setPreBodyComponents }) => {
       <script
         async
         defer
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
         src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=593868267388583&autoLogAppEvents=1"
         nonce="WS0yYVbp"
       ></script>

@@ -8,49 +8,89 @@ import {
   CapeFearSorba,
   Icons,
 } from "../../icons"
+
+const friends = [
+  {
+    title: "Bicycle Gallery",
+    icon: <BicycleGallery />,
+    link: "https://www.bicycle-gallery.com/",
+  },
+  {
+    title: "Bicycle Shop",
+    icon: <BicycleShop />,
+    link: "https://www.thebicycleshop.com",
+  },
+  {
+    title: "Cape Fear Cyclists",
+    icon: <CapeFearCyclists />,
+    link: "https://www.capefearcyclists.org/",
+  },
+  {
+    title: "Cape Fear Sorba",
+    icon: <CapeFearSorba />,
+    link: "https://capefearsorba.org/",
+  },
+]
+
 const Footer = () => {
+  console.log(friends)
   return (
     <>
       <footer className="section has-text-grey has-background-light">
         <div className="columns">
           <div className="column">
-            <h1 className="heading is-size-3 has-text-centered has-text-weight-bold">Connect</h1>
+            <h1 className="heading is-size-4 has-text-centered has-text-weight-bold">
+              Connect
+            </h1>
             <div className="social-container">
-              <FacebookCircle
-                title="Facebook"
-                className=" fb-circle"
-                size={60}
-              />
-              <Instagram title="Instagram" className=" instagram" size={50} />
+              <a
+                aria-label="Down east cyclists Facebook"
+                href="https://www.facebook.com/downeastcyclists"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <FacebookCircle
+                  title="Facebook"
+                  className="fb-circle"
+                  size={60}
+                />
+              </a>
+              <a
+                aria-label="down east cyclists instagram"
+                href="https://www.instagram.com/downeastcyclists/"
+              >
+                <Instagram title="Instagram" className="instagram" size={50} />
+              </a>
             </div>
           </div>
           <div className="column">
-            <h1 className="heading is-size-3 has-text-centered has-text-weight-bold	">Links</h1>
+            <h1 className="heading is-size-4 has-text-centered has-text-weight-bold	">
+              Links
+            </h1>
             <div className="columns has-text-centered is-center">
-              <div className="column">
-                <a href="https://www.bicycle-gallery.com/">
-                  <StyledIcon>
-                    <BicycleGallery />
-                  </StyledIcon>
-                </a>
-              </div>
-              <div className="column">
-                <StyledIcon>
-                  <BicycleShop />
-                </StyledIcon>
-              </div>
-              <div className="column">
-                <StyledIcon>
-                  <CapeFearCyclists />
-                </StyledIcon>
-              </div>
-              <div className="column">
-                <StyledIcon>
-                  <CapeFearSorba />
-                </StyledIcon>
-              </div>
+              {friends &&
+                friends.map(friend => {
+                  return (
+                    <div key={friend.title} className="column">
+                      <a
+                        target="_blank"
+                        aria-label={friend.title}
+                        rel="noreferrer noopener"
+                        href={friend.link}
+                        title={friend.title}
+                      >
+                        <StyledIcon>{friend.icon}</StyledIcon>
+                      </a>
+                    </div>
+                  )
+                })}
             </div>
           </div>
+            <div className="column">
+              <h1 className="heading is-size-4 has-text-centered has-text-weight-bold	">
+                Weekly Mileage
+              </h1>
+            </div>
         </div>
         <div className="copyright">
           <h2 className="heading">
@@ -72,3 +112,25 @@ const StyledIcon = styled(Icons)`
     }
   }
 `
+/* 
+                <a href="https://www.bicycle-gallery.com/">
+                  <StyledIcon>
+                    <BicycleGallery title="Bicycle Gallery" />
+                  </StyledIcon>
+                </a>
+              </div>
+              <div className="column">
+                <StyledIcon>
+                  <BicycleShop title="Bicycle Shop" />
+                </StyledIcon>
+              </div>
+              <div className="column">
+                <StyledIcon title="Cape Fear Cyclists">
+                  <CapeFearCyclists />
+                </StyledIcon>
+              </div>
+              <div className="column">
+                <StyledIcon>
+                  <CapeFearSorba title="Cape Fear Sorba" />
+                </StyledIcon>
+*/

@@ -59,12 +59,8 @@ $title-color: #fff;
     width: 100%;
   }
 }
-footer .columns h1 {
-  text-decoration: underline;
-  text-align: center;
-}
 .footer {
-background-color: $light;
+  background-color: $light;
 }
 .social-container {
   display: flex;
@@ -73,9 +69,15 @@ background-color: $light;
 }
 .fb-circle {
   color: #3578e5;
+  border-radius: 50%;
 }
 .fb-circle:hover {
-  color: #385898;
+transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: linear-gradient(
+    rgb(255, 143, 178) 0%,
+    rgb(167, 151, 255) 50%,
+    rgb(0, 229, 255) 100%
+  );
 }
 .instagram {
   color: $white;
@@ -93,10 +95,10 @@ background-color: $light;
   background: radial-gradient(
     circle at 30% 107%,
     #285aeb 0%,
-    #d6249f 15%,
+    #d6249f 5%,
     #fd5949 45%,
-    #fdf497 70%,
-    #fdf497 95%
+    #fdf497 60%,
+    #fdf497 90%
   );
 }
 .fb-circle,
