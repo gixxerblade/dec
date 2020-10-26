@@ -12,6 +12,7 @@ const Nav = ({ siteTitle }) => {
       <div
         onClick={() => setIsActive(!isActive)}
         onKeyDown={() => setIsActive(!isActive)}
+        tabIndex="0"
         role="button"
         className={`navbar-burger burger has-text-light are-large ${
           isActive ? "is-active" : ""
@@ -28,7 +29,10 @@ const Nav = ({ siteTitle }) => {
         {<Dec width="13rem" /> || <h1>{siteTitle}</h1>}
       </div>
       <div
+        role="button"
+        tabIndex="0"
         onClick={() => setIsActive(!isActive)}
+        onKeyDown={() => setIsActive(!isActive)}
         className={`navbar-menu ${
           isActive ? "is-active has-background-dark" : ""
         }`}
@@ -43,14 +47,9 @@ const Nav = ({ siteTitle }) => {
               <Link className="navbar-item dropdowns-a" to="/leadership">
                 Leadership
               </Link>
-              <a
-                className="navbar-item dropdowns-a"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.downeastcyclists.com/about/membership/"
-              >
+              <Link to="/membership" className="navbar-item dropdowns-a">
                 Membership
-              </a>
+              </Link>
               <Link className="navbar-item dropdowns-a" to="/bylaws">
                 By Laws
               </Link>

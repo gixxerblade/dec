@@ -33,7 +33,6 @@ const friends = [
 ]
 
 const Footer = () => {
-  console.log(friends)
   return (
     <>
       <footer className="section has-text-grey has-background-light">
@@ -92,10 +91,10 @@ const Footer = () => {
             </h1>
             <div className="has-text-centered">
               <iframe
+              title="Strava Club Mileage"
                 height="160"
                 width="300"
-                frameborder="0"
-                allowTransparency="true"
+                allowtransparency="true"
                 scrolling="no"
                 loading="lazy"
                 src="https://www.strava.com/clubs/down-east-cyclists/latest-rides/8683108f61f96a7b5c9c472f4176a0b942b74964?show_rides=false"

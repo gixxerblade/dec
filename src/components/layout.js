@@ -11,24 +11,24 @@ import { useStaticQuery, graphql } from "gatsby"
 import Nav from "./Nav"
 import Footer from "./Footer"
 import "../assets/layout.scss"
+import { useLocation } from "@reach/router"
 
 const Layout = ({ children }) => {
+  const location = useLocation()
   // * For sticky header
   const [isSticky, setIsSticky] = useState(false)
   const ref = useRef(null)
   const handleScroll = () => {
-    if (ref.current) {
+    if (ref.current && location.pathname === "/") {
       setIsSticky(ref.current.getBoundingClientRect().top <= 0)
     }
   }
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
-
     return () => {
       window.removeEventListener("scroll", () => handleScroll)
     }
-  }, [])
+  }, [handleScroll])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
