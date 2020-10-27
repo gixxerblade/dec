@@ -14,12 +14,11 @@ import "../assets/layout.scss"
 import { useLocation } from "@reach/router"
 
 const Layout = ({ children }) => {
-  const location = useLocation()
   // * For sticky header
   const [isSticky, setIsSticky] = useState(false)
   const ref = useRef(null)
   const handleScroll = () => {
-    if (ref.current && location.pathname === "/") {
+    if (ref.current) {
       setIsSticky(ref.current.getBoundingClientRect().top <= 0)
     }
   }
@@ -28,7 +27,7 @@ const Layout = ({ children }) => {
     return () => {
       window.removeEventListener("scroll", () => handleScroll)
     }
-  }, [handleScroll])
+  }, [])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

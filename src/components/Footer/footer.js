@@ -35,7 +35,7 @@ const friends = [
 const Footer = () => {
   return (
     <>
-      <footer className="section has-text-grey has-background-light">
+      <footer className="footer has-text-grey has-background-light">
         <div className="columns">
           <div className="column">
             <h1 className="heading is-size-4 has-text-centered has-text-weight-bold">

@@ -1,54 +1,18 @@
 import React from "react"
 import Layout from "../components/layout"
+import Leaders from "../components/Leaders"
 
 const Leadership = () => {
   return (
     <Layout>
       <div className="hero is-fullheight">
-        <article className="media">
-          <figure className="media-left">
-            <p className="image is-64x64">
-              <img src="https://bulma.io/images/placeholders/128x128.png" />
-            </p>
-          </figure>
-          <div className="media-content">
-            <div className="content">
-              <p>
-                <strong>John Smith</strong> <small>@johnsmith</small>
-                <small>31m</small>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ornare magna eros, eu pellentesque tortor vestibulum ut.
-                Maecenas non massa sem. Etiam finibus odio quis feugiat
-                facilisis.
-              </p>
-            </div>
-            <nav className="level is-mobile">
-              <div className="level-left">
-                <a className="level-item">
-                  <span className="icon is-small">
-                    <i className="fas fa-reply"></i>
-                  </span>
-                </a>
-                <a className="level-item">
-                  <span className="icon is-small">
-                    <i className="fas fa-retweet"></i>
-                  </span>
-                </a>
-                <a className="level-item">
-                  <span className="icon is-small">
-                    <i className="fas fa-heart"></i>
-                  </span>
-                </a>
-              </div>
-            </nav>
+        <div className="hero-body">
+          <div className="columns has-text-centered is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+            <Leaders />
           </div>
-          <div className="media-right">
-            <button className="delete"></button>
-          </div>
-        </article>
+        </div>
       </div>
     </Layout>
   )
 }
-
 export default Leadership

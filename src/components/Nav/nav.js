@@ -51,7 +51,7 @@ const Nav = ({ siteTitle }) => {
                 Membership
               </Link>
               <Link className="navbar-item dropdowns-a" to="/bylaws">
-                By Laws
+                Bylaws
               </Link>
               <Link className="navbar-item dropdowns-a" to="/privacy">
                 Privacy Policy
