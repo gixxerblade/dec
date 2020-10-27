@@ -41,16 +41,10 @@ const Leaders = () => {
       position: "Secretary/Web",
       link: "https://www.facebook.com/USMarinez/",
     },
-    {
-      name: "Van Carter",
-      image: data.allFile.edges[3].node.childImageSharp.fixed,
-      position: "Treasurer",
-      link: "/",
-    },
   ]
 
   return information.map(info => (
-    <article className="column is-half has-text-dark notification is-secondary">
+    <article className="column is-centered is-half has-text-dark notification is-secondary leader-cards">
       <div className="card">
         <div className="card-image">
           <figure class="image has-text-centered">
