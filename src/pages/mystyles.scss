@@ -67,7 +67,7 @@ $title-color: #fff;
   border-radius: 50%;
 }
 .fb-circle:hover {
-transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   background: linear-gradient(
     rgb(255, 143, 178) 0%,
     rgb(167, 151, 255) 50%,

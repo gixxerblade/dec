@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Nav from "./Nav"
 import Footer from "./Footer"
 import "../assets/layout.scss"
-import { useLocation } from "@reach/router"
 
 const Layout = ({ children }) => {
   // * For sticky header
