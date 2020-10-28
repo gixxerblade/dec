@@ -111,3 +111,19 @@ $title-color: #fff;
 .wrap {
   color: #ef1a25;
 }
+.panel-heading {
+  padding: 0;
+}
+.faq_list .panel-body {
+  padding: 40px 15px;
+}
+.faq_list .panel-heading div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  line-height: 1.875rem; /*30px*/
+  padding: 10px 15px;
+  width: 100%;
+}
