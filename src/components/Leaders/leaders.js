@@ -21,7 +21,6 @@ const Leaders = () => {
       }
     }
   `)
-  console.log(data)
   const information = [
     {
       name: "Joe Hanks",
