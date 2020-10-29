@@ -1,15 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
-
+import PageHeader from "../components/PageHeader/PageHeader"
 const Membership = () => {
   return (
     <Layout>
+      <PageHeader title="membership" />
       <div className="section is-fullheight is-center">
-        <div className="container">
-          <h1 className="title is-size-1 has-text-dark has-text-centered">
-            Membership
-          </h1>
-        </div>
+        <div className="container"></div>
         <div className="container">
           <h3 className="title has-text-dark is-size-3">Discounts</h3>
           <p className="has-text-left">
@@ -38,8 +35,8 @@ const Membership = () => {
           <h3 className="title has-text-dark is-size-3">Club Events</h3>
           <div className="content">
             <h4>
-              Down East Cyclists has sponsored a number of events throughout
-              the years:
+              Down East Cyclists has sponsored a number of events throughout the
+              years:
             </h4>
             <ul>
               <li>18km Road Time Trial</li>

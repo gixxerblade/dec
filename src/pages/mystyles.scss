@@ -63,7 +63,8 @@ $title-color: #fff;
   justify-content: center;
 }
 .fb-circle {
-  color: #3578e5;
+  color:#3578e5;
+  background:$white-ter;
   border-radius: 50%;
 }
 .fb-circle:hover {
@@ -75,7 +76,7 @@ $title-color: #fff;
   );
 }
 .instagram {
-  color: $white;
+  color: $white-ter;
   border-radius: 15px;
   background: radial-gradient(
     circle at 30% 107%,

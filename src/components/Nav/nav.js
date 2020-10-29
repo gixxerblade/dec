@@ -26,7 +26,7 @@ const Nav = ({ siteTitle }) => {
         <span aria-hidden="true"></span>
       </div>
       <div className="navbar-brand">
-        {<Dec width="13rem" /> || <h1>{siteTitle}</h1>}
+        <Link to="/">{<Dec width="13rem" /> || <h1>{siteTitle}</h1>}</Link>
       </div>
       <div
         role="button"

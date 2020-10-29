@@ -2,13 +2,12 @@ import React from "react"
 import Layout from "../components/layout"
 import Accordion, { Panel } from "../components/Accordion"
 import { bylaws } from "../objects/bylaws"
+import PageHeader from '../components/PageHeader/PageHeader';
 const ByLaws = () => {
   return (
     <Layout>
+    <PageHeader title="club bylaws"/>
       <div className="section">
-        <div className="title is-uppercase has-text-dark has-text-centered">
-          Club Bylaws
-        </div>
         <div className="container">
           <Accordion accordionId={bylaws}>
             <div className="box">

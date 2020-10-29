@@ -1,12 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 import Leaders from "../components/Leaders"
+import PageHeader from '../components/PageHeader/PageHeader';
 
 const Leadership = () => {
   return (
     <Layout>
+    <PageHeader title="leadership"/>
       <div className="section is-fullheight mt-6">
-        <div className="title has-text-dark has-text-centered">Leadership</div>
         <div className="hero-body">
           <div className="columns is-centered is-multiline is-variable">
             <Leaders />
