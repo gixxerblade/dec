@@ -4,3 +4,5 @@
     publish = "public/"
 [dev]
     command = "gatsby develop"
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
