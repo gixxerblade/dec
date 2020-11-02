@@ -57,6 +57,7 @@ const Home = () => {
                 className="is-fluid"
                 muted
                 controls
+                autoPlay
               >
                 <source src={rideDownEast} />
               </video>

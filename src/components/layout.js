@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Nav from "./Nav"
@@ -6,21 +6,6 @@ import Footer from "./Footer"
 import "../assets/layout.scss"
 
 const Layout = ({ children }) => {
-  // * For sticky header
-  const [isSticky, setIsSticky] = useState(false)
-  const ref = useRef(null)
-  const handleScroll = () => {
-    if (ref.current) {
-      setIsSticky(ref.current.getBoundingClientRect().top <= 0)
-    }
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", () => handleScroll)
-    }
-  }, [])
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,7 +18,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className={`sticky-wrapper ${isSticky ? "sticky" : ""}`} ref={ref}>
+      <div className="sticky-wrapper sticky">
         <Nav
           siteTitle={data.site.siteMetadata?.title || `Down East Cyclists`}
         />
