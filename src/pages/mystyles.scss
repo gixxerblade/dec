@@ -34,12 +34,6 @@ $title-color: #fff;
 .is-active + .navbar-item {
   color: #fff;
 }
-// * Don't show youtube video on mobile
-@media screen and (min-width: 320px) and (max-width: 411px) and (min-device-width: 320px) and (max-device-width: 480px) {
-  .youtube {
-    display: none;
-  }
-}
 @media screen and (max-width: 1024px) {
   a.navbar-item.dropdowns-a {
     color: $white-ter;
@@ -63,8 +57,8 @@ $title-color: #fff;
   justify-content: center;
 }
 .fb-circle {
-  color:#3578e5;
-  background:$white-ter;
+  color: #3578e5;
+  background: $white-ter;
   border-radius: 50%;
 }
 .fb-circle:hover {
@@ -127,4 +121,26 @@ $title-color: #fff;
   line-height: 1.875rem; /*30px*/
   padding: 10px 15px;
   width: 100%;
+}
+.content .event-address {
+  list-style: none;
+}
+.success-video {
+  position: relative;
+}
+.success-video svg {
+  z-index: 1;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: $white;
+}
+.success-video svg:hover {
+  color: $yellow;
+}
+.success-video svg:active {
+  color: $success;
+}
+.close-vid {
+  display: none;
 }

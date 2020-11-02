@@ -30,11 +30,32 @@ export const MeetUpCards = ({ events }) => {
                       </strong>
                     </div>
                   </div>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: event.node.description,
-                    }}
-                  />
+                  <div className="columns">
+                    <div className="column">
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: event.node.description,
+                        }}
+                      />
+                    </div>
+                    <div className="column">
+                      <div className="content">
+                        <div className="title is-5 has-text-dark has-text-right">
+                          Location
+                        </div>
+                        <ul className="has-text-right event-address">
+                          <li className="list-item">{event.node.venue.name}</li>
+                          <li className="list-item">
+                            {event.node.venue.address_1}
+                          </li>
+                          <li className="list-item">
+                            {event.node.venue.city},&nbsp;
+                            {event.node.venue.state}&nbsp;{event.node.venue.zip}
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

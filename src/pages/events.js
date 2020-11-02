@@ -32,7 +32,7 @@ const Events = () => {
   `)
 
   const events = data?.allMeetupEvent?.edges
-
+    
   return (
     <Layout>
       <PageHeader title="upcoming events" className="has-text-white" />
