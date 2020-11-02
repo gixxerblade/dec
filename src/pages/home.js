@@ -1,8 +1,20 @@
 import React, { useRef, useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import rideDownEast from "../../video/ridedowneast.mp4"
+import { useStaticQuery, graphql } from "gatsby"
+
 const Home = () => {
+  const data = useStaticQuery(graphql`
+    {
+      contentfulAsset(title: {eq: "ridedowneast"}) {
+        id
+        file {
+          contentType
+          url
+        }
+      }
+    }
+  `)
   const videoRef = useRef()
 
   const play = () => {
@@ -33,7 +45,7 @@ const Home = () => {
             loop
             playsInline
           >
-            <source src={rideDownEast} />
+            <source src={data.contentfulAsset.file.url} />
           </video>
         </div>
       </div>

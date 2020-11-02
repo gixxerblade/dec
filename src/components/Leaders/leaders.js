@@ -6,56 +6,44 @@ import styled from "styled-components"
 const Leaders = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { relativeDirectory: { in: "leaders" } }) {
+      allContentfulLeaders(sort: { fields: order, order: ASC }) {
         edges {
           node {
             id
-            childImageSharp {
-              fixed(width: 300, height: 300) {
-                ...GatsbyImageSharpFixed
+            image {
+              fixed(height: 300, width: 300) {
+                ...GatsbyContentfulFixed
               }
             }
             name
+            position
+            link {
+              url
+            }
           }
         }
       }
     }
   `)
-  const information = [
-    {
-      name: "Joe Hanks",
-      image: data.allFile.edges[0].node.childImageSharp.fixed,
-      position: "President",
-      link: "https://www.facebook.com/joseph.hanks.35",
-    },
-    {
-      name: "Bruce Lockhart",
-      image: data.allFile.edges[1].node.childImageSharp.fixed,
-      position: "Vice-President",
-      link: "https://www.facebook.com/cuzinbruce",
-    },
-    {
-      name: "Steve Clark",
-      image: data.allFile.edges[2].node.childImageSharp.fixed,
-      position: "Secretary/Web",
-      link: "https://www.facebook.com/USMarinez/",
-    },
-  ]
 
+  const information = data.allContentfulLeaders.edges
+  console.log(information[0].node.image)
   return information.map(info => (
     <article className="column is-centered is-half has-text-dark notification is-secondary leader-cards">
       <div className="card">
         <div className="card-image">
           <figure class="image has-text-centered">
-            <Img fixed={info.image} />
+            <Img fixed={info.node.image.fixed} />
           </figure>
         </div>
         <div className="card-content">
-          <p className="title has-text-dark has-text-centered">{info.name}</p>
-          <p className="subtitle has-text-centered">{info.position}</p>
-          {info.link && (
+          <p className="title has-text-dark has-text-centered">
+            {info.node.name}
+          </p>
+          <p className="subtitle has-text-centered">{info.node.position}</p>
+          {info?.node?.link?.url && (
             <p className="subtitle has-text-centered">
-              <a rel="noreferrer" target="_blank" href={info.link}>
+              <a rel="noreferrer" target="_blank" href={info.node.link.url}>
                 <StyledFB size={50} />
               </a>
             </p>
