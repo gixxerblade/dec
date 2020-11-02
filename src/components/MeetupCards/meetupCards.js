@@ -1,34 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
-export const MeetUpCards = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allMeetupEvent(limit: 5) {
-        edges {
-          node {
-            time
-            description
-            local_date
-            local_time
-            name
-            link
-            duration
-            venue {
-              address_1
-              city
-              name
-              state
-              zip
-            }
-            status
-          }
-        }
-      }
-    }
-  `)
-  const events = data?.allMeetupEvent?.edges
-
+export const MeetUpCards = ({ events }) => {
   return (
     <>
       {events.map(event => {
@@ -42,9 +14,8 @@ export const MeetUpCards = () => {
         const time = dateObject.toLocaleTimeString("en-US", {
           timeStyle: "short",
         })
-
         return (
-          <div className="section">
+          <div key={event.node.id} className="section">
             <div className="box radius-large">
               <div className="media-content">
                 <div className="content">
@@ -60,7 +31,9 @@ export const MeetUpCards = () => {
                     </div>
                   </div>
                   <p
-                    dangerouslySetInnerHTML={{ __html: event.node.description }}
+                    dangerouslySetInnerHTML={{
+                      __html: event.node.description,
+                    }}
                   />
                 </div>
               </div>
