@@ -2,9 +2,10 @@ import React from "react"
 import Dec from "../icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import { Link } from "gatsby"
 const NotFoundPage = () => (
   <Layout>
+    <SEO title="404: Not found" />
     <br />
     <br />
     <div className="section">
@@ -25,10 +26,11 @@ const NotFoundPage = () => (
     </div>
     <div className="section">
       <div className="container has-text-centered">
-        <Dec shadow="#000" cyclists="#000" details="gray" height="300" />
+        <Link id="sadface-link" title="Click to go home" to="/">
+          <Dec shadow="#000" cyclists="#000" details="gray" height="300" />
+        </Link>
       </div>
     </div>
-    <SEO title="404: Not found" />
   </Layout>
 )
 

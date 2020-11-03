@@ -61,18 +61,13 @@ module.exports = {
         status: "upcoming",
         desc: "false",
         page: 100,
-        eventOptions: [
+        /* eventOptions: [
           {
             status: `upcoming`,
             desc: `true`,
-            page: 5,
+            page: 100,
           },
-          /* {
-            status: `past`,
-            desc: `true`,
-            page: 5,
-          }, */
-        ],
+        ], */
       },
     },
     {

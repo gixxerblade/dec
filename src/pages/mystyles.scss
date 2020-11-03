@@ -5,6 +5,17 @@ $title-color: #fff;
 
 @import "~bulma/bulma.sass";
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #f20304;
+  background: $grey-light;
+}
+
+::selection {
+  color: #f20304;
+  background: $grey-dark;
+}
+
 .navbar-item:hover {
   color: $black;
 }
@@ -135,11 +146,6 @@ $title-color: #fff;
   padding: 0;
   margin: 0;
 }
-/* .home-content {
-  background-color: rgba(120, 120, 120, 0.055);
-}
-
- */
 @media screen and (max-width: 768px) {
   .success-video {
     background: url("../images/ridedowneast.gif") no-repeat center center fixed;
@@ -148,4 +154,7 @@ $title-color: #fff;
     -o-background-size: cover;
     background-size: cover;
   }
+}
+#sadface-link {
+  cursor: url("../images/sad.png"), pointer;
 }
