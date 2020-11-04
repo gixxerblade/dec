@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl request
-      - run: gatsby clean
       - run: curl -X POST -d {} https://api.netlify.com/build_hooks/5fa2b3cb5a2f610d8ba0d0f6
