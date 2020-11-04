@@ -10,7 +10,6 @@ export const MeetUpCards = ({ events }) => {
         const state = `${event.node.venue.state}`
         const zip = `${event.node.venue.zip}`
         const directions = `${GOOGLE_DIRECTIONS}${address1}%7c${city}%7c${state}%7c${zip}`
-        console.log(directions)
         const dateObject = new Date(event.node.time)
         const dayOfWeek = dateObject.toLocaleString("en-US", {
           weekday: "long",

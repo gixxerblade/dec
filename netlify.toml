@@ -1,5 +1,5 @@
 [build]
-    command = "gatsby build"
+    command = "sh ./deploy.sh"
     functions = "functions/"
     publish = "public/"
 [dev]
