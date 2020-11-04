@@ -1,7 +1,7 @@
 name: Trigger Netlify Build
 on:
   schedule:
-    # Run at 0815 daily
+    # Run at every two hours
     - cron: "0 */2 * * *"
 jobs:
   build:
@@ -9,4 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl request
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/5fa2b3cb5a2f610d8ba0d0f6
+      - run: gatsby clean
+      - run: curl -X POST -d {} https://api.netlify.com/build_hooks/5fa2b3cb5a2f610d8ba0d0f6
