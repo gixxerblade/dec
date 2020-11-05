@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 
-const InfiniteScroll = ({ pageContext: { edges } }) => {
-  const [hasMore, setMore] = useState(edges.length > 10)
-  const [currentList, addToList] = useState([...edges.slice(0, 10)])
+const InfiniteScroll = ({ pageContext: { events } }) => {
+  const [hasMore, setMore] = useState(events.length > 10)
+  const [currentList, addToList] = useState([...events.slice(0, 10)])
   const loadEdges = () => {
     const currentLength = currentList.length
-    const more = currentLength < edges.length
-    const nextEdges = more ? edges.slice(currentLength, currentLength + 20) : []
+    const more = currentLength < events.length
+    const nextEdges = more
+      ? events.slice(currentLength, currentLength + 10)
+      : []
     setMore(more)
-    addToList(() => [...currentList, ...nextEdges])
+    addToList([...currentList, ...nextEdges])
   }
-
   const handleScroll = () => {
     if (!hasMore) return
     else if (
       window &&
       window.innerHeight + document.documentElement.scrollTop >=
-        document.documentElement.offsetHeight
+        document.documentElement.offsetHeight-100
     ) {
       loadEdges()
     }
@@ -28,7 +29,7 @@ const InfiniteScroll = ({ pageContext: { edges } }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-     //eslint-disable-next-line
+    //eslint-disable-next-line
   }, [hasMore, currentList])
 
   const GOOGLE_DIRECTIONS = "https://www.google.com/maps/search/?api=1&query="
