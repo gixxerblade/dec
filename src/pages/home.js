@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const Home = () => {
   const data = useStaticQuery(graphql`
     {
-      contentfulAsset(title: {eq: "ridedowneast"}) {
+      contentfulAsset(title: { eq: "ridedowneast" }) {
         id
         file {
           contentType
@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="hero is-fullheight success-video">
+      <div viewport-fit="cover" className="hero is-fullheight success-video">
         <div className="hero-video">
           <video
             onPlay={play}
