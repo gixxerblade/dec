@@ -41,10 +41,7 @@ const buildAllBlogPostList = async graphql => {
         totalCount
         edges {
           node {
-            id
-            postTitle
             slug
-            publishDate(formatString: "MMMMM Do, YYYY")
           }
         }
       }
@@ -79,6 +76,7 @@ const buildPaginatedPages = async ({
           edges {
             node {
               postTitle
+              author
               slug
               id
               publishDate(formatString: "MMMM Do, YYYY")
