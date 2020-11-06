@@ -36,8 +36,8 @@ const buildAllEvents = async (graphql, createPage, infiniteScrollTemplate) => {
 
 const buildAllBlogPostList = async graphql => {
   const allBlogPostList = await graphql(`
-    {
-      allContentfulBlogPost(sort: { order: DESC, fields: publishDate }) {
+    query {
+      allContentfulBlogPost {
         totalCount
         edges {
           node {
@@ -67,7 +67,7 @@ const buildPaginatedPages = async ({
     const isLastPage = currentPage === totalPages
     const skip = index + postsPerPage
     const paginatedBlogPostsList = await graphql(`
-      query paginatedBlogPostsLists {
+      query paginatedBlogPostsList {
         allContentfulBlogPost(
           sort: { order: DESC, fields: publishDate }
           limit: 3
@@ -93,13 +93,20 @@ const buildPaginatedPages = async ({
               }
               featuredImage {
                 fluid(maxWidth: 450) {
-                    ...GatsbyContentfulFluid
-
+                    base64
+                    aspectRatio
+                    src
+                    srcSet
+                    sizes
                 }
               }
               contentImages {
                 fluid(maxWidth: 300) {
-                    ...GatsbyContentfulFluid
+                    base64
+                    aspectRatio
+                    src
+                    srcSet
+                    sizes
                 }
               }
             }
@@ -117,7 +124,7 @@ const buildPaginatedPages = async ({
         isLastPage,
         currentPage,
         totalPages,
-        contentfulData: paginatedBlogPostsList.data.allContentfulBlogPost,
+        contentfulData: paginatedBlogPostsList.data,
       },
     })
     index++
@@ -157,13 +164,20 @@ const buildIndividualBlogPostPage = async ({
                 }
                 featuredImage {
                   fluid(maxWidth: 450) {
-                      ...GatsbyContentfulFluid
-  
+                    base64
+                    aspectRatio
+                    src
+                    srcSet
+                    sizes  
                   }
                 }
                 contentImages {
                   fluid(maxWidth: 300) {
-                      ...GatsbyContentfulFluid
+                    base64
+                    aspectRatio
+                    src
+                    srcSet
+                    sizes
                   }
                 }
               }

@@ -11,12 +11,14 @@ exports.createPages = async ({ actions, graphql }) => {
   const infiniteScrollTemplate = path.resolve(
     `./src/templates/infinite-scroll-template.js`
   )
+  const blogTemplate = path.resolve("./src/templates/blog-list-template.js")
+  const blogPostTemplate = path.resolve('./src/templates/blog-post-template.js')
+
   await buildAllEvents(graphql, createPage, infiniteScrollTemplate)
   const allBlogPostList = await buildAllBlogPostList(graphql)
   await buildPaginatedPages({
     graphql,
-    totalBlogPostCount:
-      allBlogPostList.data.allContentfulBlogPostList.totalCount,
+    totalBlogPostCount: allBlogPostList.data.allContentfulBlogPost.totalCount,
     blogTemplate,
     createPage,
   })
