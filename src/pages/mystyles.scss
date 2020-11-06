@@ -170,3 +170,15 @@ $title-color: #fff;
 #sadface-link {
   cursor: url("../images/sad.png"), pointer;
 }
+.blog-line {
+  position: relative;
+}
+.blog-line:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px; // suit your need
+  background: black; // suit your need
+  top: 100%;
+  left: 0;
+}

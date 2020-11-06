@@ -11,7 +11,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const infiniteScrollTemplate = path.resolve(
     `./src/templates/infinite-scroll-template.js`
   )
-  const blogTemplate = path.resolve("./src/templates/blog-list-template.js")
+  const blogListTemplate = path.resolve("./src/templates/blog-list-template.js")
   const blogPostTemplate = path.resolve('./src/templates/blog-post-template.js')
 
   await buildAllEvents(graphql, createPage, infiniteScrollTemplate)
@@ -19,7 +19,7 @@ exports.createPages = async ({ actions, graphql }) => {
   await buildPaginatedPages({
     graphql,
     totalBlogPostCount: allBlogPostList.data.allContentfulBlogPost.totalCount,
-    blogTemplate,
+    blogListTemplate,
     createPage,
   })
   await buildIndividualBlogPostPage({

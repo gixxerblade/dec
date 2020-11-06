@@ -65,7 +65,7 @@ const buildPaginatedPages = async ({
     const currentPage = index + 1
     const isFirstPage = index === 0
     const isLastPage = currentPage === totalPages
-    const skip = index + postsPerPage
+    const skip = index * postsPerPage
     const paginatedBlogPostsList = await graphql(`
       query paginatedBlogPostsList {
         allContentfulBlogPost(
@@ -92,22 +92,21 @@ const buildPaginatedPages = async ({
                 content
               }
               featuredImage {
-                fluid(maxWidth: 450) {
+                fixed {
                     base64
-                    aspectRatio
+                    width
+                    height
                     src
                     srcSet
-                    sizes
-                }
+                  }
               }
               contentImages {
-                fluid(maxWidth: 300) {
+                fixed {
                     base64
-                    aspectRatio
+                    width
+                    height
                     src
-                    srcSet
-                    sizes
-                }
+                    srcSet                                  }
               }
             }
           }
@@ -139,52 +138,36 @@ const buildIndividualBlogPostPage = async ({
 }) => {
   for (let edge of allBlogPostList.data.allContentfulBlogPost.edges) {
     const blogPost = await graphql(`
-        query paginatedBlogPostsLists {
-          allContentfulBlogPost(
-            sort: { order: DESC, fields: publishDate }
-            limit: 3
-            skip: ${skip}
-          ) {
-            edges {
-              node {
-                postTitle
-                slug
-                id
-                publishDate(formatString: "MMMM Do, YYYY")
-                content {
-                  id
-                  childMarkdownRemark {
-                    excerpt
-                    html
-                    timeToRead
-                  }
-                }
-                tags {
-                  content
-                }
-                featuredImage {
-                  fluid(maxWidth: 450) {
-                    base64
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes  
-                  }
-                }
-                contentImages {
-                  fluid(maxWidth: 300) {
-                    base64
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
-                  }
-                }
-              }
+      query {
+        contentfulBlogPost(slug: { eq: "${edge.node.slug}" }) {
+          id
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          postTitle
+          content {
+            childMarkdownRemark {
+              html
+              timeToRead
             }
           }
+          author
+          categories {
+            content
+            id
+          }
+          contentImages {
+            fixed {
+              base64
+              tracedSVG
+              aspectRatio
+              srcWebp
+              srcSetWebp
+            }
+            title
+          }
         }
-      `)
+      }
+    `)
     createPage({
       component: blogPostTemplate,
       path: `/blog/${edge.node.slug}`,
