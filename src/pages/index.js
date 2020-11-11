@@ -6,6 +6,7 @@ import Membership from "./membership"
 import ByLaws from "./bylaws"
 import Privacy from "./privacy"
 import Events from "./events"
+
 import "./mystyles.scss"
 
 const IndexPage = () => (
