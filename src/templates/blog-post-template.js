@@ -17,7 +17,6 @@ const BlogPost = ({ pageContext }) => {
       },
     },
   } = pageContext
-  //console.log(contentfulBlogPost)
 
   return (
     <Layout>

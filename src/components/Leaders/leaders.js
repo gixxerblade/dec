@@ -27,7 +27,6 @@ const Leaders = () => {
   `)
 
   const information = data.allContentfulLeaders.edges
-  console.log(information[0].node.image)
   return information.map(info => (
     <article className="column is-centered is-half has-text-dark notification is-secondary leader-cards">
       <div className="card">
