@@ -154,7 +154,7 @@ $title-color: #fff;
   height: 100vh;
 }
 .google-map {
-  width: 75%;
+  width: 55%;
   height: 60vh;
 }
 .pin-text {
@@ -163,6 +163,11 @@ $title-color: #fff;
   font-weight: 600;
   text-align: center;
   color: #fff;
+}
+.hendo-title {
+  width: 35vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Media queries */
@@ -191,6 +196,9 @@ $title-color: #fff;
   a.navbar-item.dropdowns-a {
     color: $white-ter;
   }
+  .hendo-title {
+    width: 65vw;
+  }  
 }
 @media screen and (max-width: 560px) {
   .fb-container {
@@ -200,4 +208,12 @@ $title-color: #fff;
   .facebook {
     width: 100%;
   }
+}
+@media screen and (max-width: 411px) {
+  .google-map {
+    width: 100%;
+  }
+  .hendo-title {
+    width: 65vw;
+  }  
 }

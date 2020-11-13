@@ -1,6 +1,5 @@
 import React, { createRef, useState, useEffect } from "react"
 import GoogleMapReact from "google-map-react"
-import LocationPin from "./locationPin"
 import hendoAll from "../../objects/hendo-all.json"
 import useWindowDimensions from "../../hooks/useWindowDimension"
 
@@ -27,7 +26,7 @@ const Maps = ({ location }) => {
       )
       return coordArr
     }
-    // Helper to show info window
+    // Helper function to show info window
     const showInfoWindow = (marker, info) => {
       marker.addListener("mouseover", () => {
         info.open(map, marker)
@@ -114,7 +113,8 @@ const Maps = ({ location }) => {
         })
         picnic.setMap(map)
         showInfoWindow(picnic, picnicInfo)
-      } else return null
+      } 
+      return null
     })
   }
 
