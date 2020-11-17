@@ -2,33 +2,13 @@ import React from "react"
 import PageHeader from "../components/PageHeader/PageHeader"
 import Layout from "../components/layout"
 import CommonMap from "../components/Maps/commonMap"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { RouteAnnouncerProps } from "../../.cache/route-announcer-props"
 
 const Commons = () => {
-  const data = useStaticQuery(graphql`
-    {
-      contentfulAsset(file: { fileName: { eq: "commons.jpeg" } }) {
-        id
-        fluid(maxWidth: 600, quality: 100) {
-          ...GatsbyContentfulFluid
-        }
-      }
-    }
-  `)
-
   const location = {
     lat: 34.794045,
     lng: -77.403597,
   }
 
-  /* North Carolina
-34.794045, -77.403597
-
-
-
- */
   return (
     <Layout>
       <PageHeader title="Jacksonville Commons" />
@@ -47,6 +27,7 @@ const Commons = () => {
                 width="300"
                 height="150"
                 scrolling="no"
+                title="commons trail conditions"
               ></iframe>
             </div>
             <div className="p-3 column is-three-fifths is-size-5">
