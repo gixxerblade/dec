@@ -6,7 +6,9 @@ import Membership from "./membership"
 import ByLaws from "./bylaws"
 import Privacy from "./privacy"
 import Events from "./events"
-
+import Trails from "./trails"
+import Hendo from "./hendo"
+import Commons from "./commons"
 import "./mystyles.scss"
 
 const IndexPage = () => (
@@ -17,6 +19,10 @@ const IndexPage = () => (
     <ByLaws path="/bylaws" />
     <Privacy path="/privacy" />
     <Events path="/events" />
+    <Trails path="/trails">
+      <Hendo path="/hendo" />
+      <Commons path="/commons" />
+    </Trails>
   </Router>
 )
 

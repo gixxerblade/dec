@@ -1,24 +1,23 @@
-import React, { createRef, useState, useEffect } from "react"
-import GoogleMapReact from "google-map-react"
-import hendoAll from "../../objects/hendo-all.json"
+import React, { useState, useEffect } from "react"
+import GoogleMap from "./GoogleMap"
 import useWindowDimensions from "../../hooks/useWindowDimension"
+import hendo from "../../objects/hendo.json"
 
 const isClient = typeof window !== "undefined"
+
 //src/hooks/useFetch.js
 const Maps = ({ location }) => {
   // useWindowDimensions custom hook to change zoom level
   const [dimensions, setDimensions] = useState(useWindowDimensions())
 
-  const mapRef = createRef()
-
+  // ? set map as HYBRID
   const getOptions = maps => {
-    // set map as HYBRID
     return {
       mapTypeId: maps.MapTypeId.HYBRID,
     }
   }
   const handleApiLoaded = (map, maps) => {
-    // Helper function to convert coordinates for api use
+    // ? Helper function to convert coordinates for api use
     const convertCoords = coords => {
       let coordArr = []
       coords.map(coordinate =>
@@ -26,7 +25,7 @@ const Maps = ({ location }) => {
       )
       return coordArr
     }
-    // Helper function to show info window
+    // ? Helper function to show info window
     const showInfoWindow = (marker, info) => {
       marker.addListener("mouseover", () => {
         info.open(map, marker)
@@ -35,6 +34,17 @@ const Maps = ({ location }) => {
         info.close(map, marker)
       })
     }
+    const gameWardenInfo = new maps.InfoWindow({
+      content: `<div>Game Warden's Office</div>`,
+    })
+    const gameWarden = new maps.Marker({
+      position: { lat: 34.70779, lng: -77.326537 },
+      title: "Game Wardens",
+      map,
+      icon:
+        "https://developers.google.com/maps/documentation/javascript/examples/full/images/info-i_maps.png",
+    })
+    showInfoWindow(gameWarden, gameWardenInfo)
 
     const kidsInfo = new maps.InfoWindow({
       content: `<div>Kid's Track</div>`,
@@ -47,17 +57,34 @@ const Maps = ({ location }) => {
     })
     showInfoWindow(kidsMarker, kidsInfo)
 
-    // Map through hendo-all.json and extract all coordinates for map display
-    // This is getting complicated...
-    hendoAll.features.map(feature => {
+    // ? Map through hendo.json and extract all coordinates for map display
+    hendo.features.map((feature, index) => {
       const { coordinates } = feature.geometry
       const { name } = feature.properties
       const { type } = feature.geometry
+      if (name === "Creek" && type === "LineString") {
+        const creek = new maps.Polyline({
+          path: convertCoords(coordinates),
+          strokeColor: "#00ffff",
+          strokeWeight: 3,
+          strokeOpacity: 1,
+        })
+        creek.setMap(map)
+      }
+      if (name === "Hazmat Area" && type === "LineString") {
+        const hazmatArea = new maps.Polyline({
+          path: convertCoords(coordinates),
+          strokeColor: "#ffffff",
+          strokeWeight: 3,
+          strokeOpacity: 1,
+        })
+        hazmatArea.setMap(map)
+      }
       if (name === "Road" && type === "LineString") {
         const road = new maps.Polyline({
           path: convertCoords(coordinates),
           strokeColor: "#000000",
-          strokeWeight: 3,
+          strokeWeight: 4,
           strokeOpacity: 1,
         })
         road.setMap(map)
@@ -82,6 +109,22 @@ const Maps = ({ location }) => {
         })
         kids.setMap(map)
       }
+
+      const accessPointLabels = "12345678"
+      if (name === "Access Point" && type === "Point") {
+        const accessInfo = new maps.InfoWindow({
+          content: `<div>Trail Access Point</div>`,
+        })
+        const access = new maps.Marker({
+          position: { lat: coordinates[1], lng: coordinates[0] },
+          map,
+          title: "Access Point",
+          label: accessPointLabels[index % accessPointLabels.length],
+        })
+        access.setMap(map)
+        showInfoWindow(access, accessInfo)
+      }
+
       if (name === "Parking" && type === "Point") {
         const parkingInfo = new maps.InfoWindow({
           content: `<div>Parking</div>`,
@@ -113,7 +156,7 @@ const Maps = ({ location }) => {
         })
         picnic.setMap(map)
         showInfoWindow(picnic, picnicInfo)
-      } 
+      }
       return null
     })
   }
@@ -135,21 +178,18 @@ const Maps = ({ location }) => {
     <>
       <div className="google-map container has-text-centered">
         {isClient && (
-          <GoogleMapReact
-            ref={mapRef}
-            bootstrapURLKeys={{
-              key: process.env.GATSBY_GOOGLE_MAPS,
-              language: "en",
-              libraries: ["visualization", "drawing", "geometry"],
-              fullscreenControl: true,
-              streetViewControl: false,
-            }}
+          <GoogleMap
+            //ref={mapRef}
+            language="en"
+            libraries={["visualization", "drawing", "geometry"]}
+            fullscreenControl="true"
+            streetViewControl="false"
             center={location}
             zoom={zoomLevel}
             options={getOptions}
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
-          ></GoogleMapReact>
+          ></GoogleMap>
         )}
       </div>
     </>

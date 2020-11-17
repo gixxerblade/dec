@@ -157,6 +157,10 @@ $title-color: #fff;
   width: 55%;
   height: 60vh;
 }
+.google-map-commons {
+  width: 64%;
+  height: 60vh;
+}
 .pin-text {
   width: 3rem;
   font-size: 1rem;
@@ -198,7 +202,12 @@ $title-color: #fff;
   }
   .hendo-title {
     width: 65vw;
-  }  
+  }
+  .google-map,
+  .google-map-commons {
+    width: 100%;
+  }
+
 }
 @media screen and (max-width: 560px) {
   .fb-container {
@@ -210,10 +219,11 @@ $title-color: #fff;
   }
 }
 @media screen and (max-width: 411px) {
-  .google-map {
+  .google-map,
+  .google-map-commons {
     width: 100%;
   }
   .hendo-title {
     width: 65vw;
-  }  
+  }
 }

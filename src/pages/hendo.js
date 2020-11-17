@@ -39,17 +39,34 @@ const Hendo = () => {
           <figure className="image hendo-title">
             <Img fluid={data.hendo.fluid} />
           </figure>
-          <p className="p-3 has-text-justified">
-            Henderson Pond Trail is on board Camp LeJeune and was born with a
-            MOA (Memorandum of Agreement) between Down East Cyclists and Camp
-            LeJeune. The agreement authorized the club to build biking/hiking
-            trails in the Henderson Pond Recreational area. The trail has been
-            built and maintained over the years and we finally have close to 8
-            miles of solid trail built for anyone with access to the base and
-            their guests to ride and hike. The trail has been home to one of the
-            races in the Coastal Carolina Off-Road Series (CCORS) MTB Races,
-            Time Trial events, and more!
-          </p>
+          <br />
+          <div className="columns">
+            <div className="column has-text-centered p-1">
+              <iframe
+                className="has-text-centered"
+                title="trail conditions"
+                style={{
+                  height: "17.5rem",
+                  width: "19.75rem",
+                  border: "none",
+                  overflow: "hidden",
+                }}
+                src="http://www.singletracks.com/ajax/trail_conditions_widget.php?hash=i:1:7826&amp;width=350&amp;height=250"
+                scrolling="no"
+              ></iframe>
+            </div>
+            <p className="p-3 has-text-justified column  is-three-fifths is-size-5">
+              Henderson Pond Trail is on board Camp LeJeune and was born with a
+              MOA (Memorandum of Agreement) between Down East Cyclists and Camp
+              LeJeune. The agreement authorized the club to build biking/hiking
+              trails in the Henderson Pond Recreational area. The trail has been
+              built and maintained over the years and we finally have close to 8
+              miles of solid trail built for anyone with access to the base and
+              their guests to ride and hike. The trail has been home to one of
+              the races in the Coastal Carolina Off-Road Series (CCORS) MTB
+              Races, Time Trial events, and more!
+            </p>
+          </div>
           <hr />
           <p className="heading has-text-centered is-size-4 p-3">
             Current Henderson Pond Route
