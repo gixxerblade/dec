@@ -23,7 +23,7 @@ const Commons = () => {
                   border: "none",
                   overflow: "hidden",
                 }}
-                src="http://www.singletracks.com/ajax/trail_conditions_widget.php?hash=i:1:7958&amp;width=350&amp;height=250"
+                src="https://www.singletracks.com/ajax/trail_conditions_widget.php?hash=i:1:7958&amp;width=350&amp;height=250"
                 width="300"
                 height="150"
                 scrolling="no"

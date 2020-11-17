@@ -51,7 +51,7 @@ const Hendo = () => {
                   border: "none",
                   overflow: "hidden",
                 }}
-                src="http://www.singletracks.com/ajax/trail_conditions_widget.php?hash=i:1:7826&amp;width=350&amp;height=250"
+                src="https://www.singletracks.com/ajax/trail_conditions_widget.php?hash=i:1:7826&amp;width=350&amp;height=250"
                 scrolling="no"
               ></iframe>
             </div>
