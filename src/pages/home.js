@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <>
-      <body viewport-fit="cover" className="hero is-fullheight success-video">
+      <div viewport-fit="cover" className="hero is-fullheight success-video">
         <div className="hero-video">
           <video
             onPlay={play}
@@ -47,7 +47,7 @@ const Home = () => {
             <source src={data.contentfulAsset.file.url} />
           </video>
         </div>
-      </body>
+      </div>
       <Layout>
         <SEO title="Home" />
         <div className="hero is-fullheight">
