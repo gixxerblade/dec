@@ -13,12 +13,12 @@ const BlogPostLink = ({
   excerpt,
 }) => {
   return (
-    <div className="section article blog-line">
+    <div className="column section article blog-line">
       <div className="content has-text-dark">
-        <div className="container is-fullhd has-text-centered">
+        <div className="container has-text-centered">
           <Link to={`/blog/${slug}`}>
             <Img
-              Tag="figure"
+              Tag="div"
               fixed={featuredImage}
               className="card-image"
               title={title}
@@ -37,7 +37,9 @@ const BlogPostLink = ({
               <span className="tag is-rounded">{publishDate}</span>
             </div>
           </div>
-          <div className="content is-size-5 article-body has-text-left">{excerpt}</div>
+          <div className="content is-size-5 article-body has-text-left">
+            {excerpt}
+          </div>
         </div>
       </div>
       <div className="container has-text-centered">
@@ -63,7 +65,7 @@ const Blog = ({ pageContext }) => {
     {
       contentfulAsset(file: { fileName: { eq: "hungry_toad-48.jpg" } }) {
         id
-        fixed {
+        fixed(width: 300) {
           ...GatsbyContentfulFixed
         }
         title
@@ -85,7 +87,7 @@ const Blog = ({ pageContext }) => {
                 <BlogPostLink
                   key={node.id}
                   featuredImage={
-                    node?.featuredImage?.fixed || dec?.contentfulAsset.fixed
+                    node?.featuredImage?.fixed ?? dec?.contentfulAsset?.fixed
                   }
                   title={node.postTitle}
                   slug={node.slug}
@@ -131,7 +133,7 @@ const Blog = ({ pageContext }) => {
           ))}
         </ul>
       </nav>
-      <br/>
+      <br />
     </Layout>
   )
 }

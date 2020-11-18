@@ -207,7 +207,6 @@ $title-color: #fff;
   .google-map-commons {
     width: 100%;
   }
-
 }
 @media screen and (max-width: 560px) {
   .fb-container {
@@ -225,5 +224,11 @@ $title-color: #fff;
   }
   .hendo-title {
     width: 65vw;
+  }
+  .card-image {
+    overflow: hidden;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

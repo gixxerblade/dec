@@ -15,7 +15,7 @@ const Commons = () => {
       <div className="section">
         <div className="container">
           <div className="columns p-3">
-            <div className="column has-text-centered p-1">
+            <div className="column has-text-centered is-two-fifths p-1">
               <iframe
                 style={{
                   height: "17.5rem",
@@ -47,11 +47,21 @@ const Commons = () => {
           <CommonMap location={location} />
           <div className="container pt-3">
             <div className="columns has-text-centered">
-              <div className="column has-text-right">
-                <a href="../objects/blue-trail.gpx">Blue Trail GPX Route</a>
+              <div className="column has-text-centered is-half">
+                <a
+                  href="https://downeastcyclists.s3.amazonaws.com/blue-trail.gpx"
+                  download
+                >
+                  Blue Trail GPX Route
+                </a>
               </div>
-              <div className="column has-text-left">
-                <a href="../objects/green-trail.gpx">Green Trail GPX Route</a>
+              <div className="column has-text-centered is-half">
+                <a
+                  href="https://downeastcyclists.s3.amazonaws.com/green-trail.gpx"
+                  download
+                >
+                  Green Trail GPX Route
+                </a>
               </div>
             </div>
           </div>

@@ -92,21 +92,14 @@ const buildPaginatedPages = async ({
                 content
               }
               featuredImage {
-                fixed {
-                    base64
-                    width
-                    height
-                    src
-                    srcSet
-                  }
-              }
-              contentImages {
-                fixed {
-                    base64
-                    width
-                    height
-                    src
-                    srcSet                                  }
+                fixed(width: 300) {
+                  base64
+                  aspectRatio 
+                  width 
+                  height 
+                  src 
+                  srcSet 
+                }
               }
             }
           }

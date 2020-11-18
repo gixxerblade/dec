@@ -18,7 +18,7 @@ const InfiniteScroll = ({ pageContext: { events } }) => {
     else if (
       window &&
       window.innerHeight + document.documentElement.scrollTop >=
-        document.documentElement.offsetHeight-100
+        document.documentElement.offsetHeight - 100
     ) {
       loadEdges()
     }
@@ -37,8 +37,8 @@ const InfiniteScroll = ({ pageContext: { events } }) => {
   return (
     <>
       <div className="section">
-        <h1 className="title is-2 has-text-centered has-text-dark">Events</h1>
         <div className="container">
+          <h1 className="title is-2 has-text-centered has-text-dark">Events</h1>
           <div className="content">
             <ul>
               {currentList.map(({ node }) => {
@@ -64,57 +64,59 @@ const InfiniteScroll = ({ pageContext: { events } }) => {
                   timeStyle: "short",
                 })
                 return (
-                  <div key={node.id} className="section">
-                    <div className="box radius-large">
-                      <div className="media-content">
-                        <div className="content">
-                          <div className="columns">
-                            <div className="column title is-4 has-text-dark">
-                              <strong>{node.name}</strong>
+                  <div key={node.id} className="section is-center">
+                    <div className="container tile is-justify-content-center is-ancestor">
+                      <div className="box tile is-9 radius-large">
+                        <div className="tile is-parent is-vertical is-8">
+                          <div className="tile is-child is-8">
+                            <div className="title is-size-4 has-text-dark">
+                              <a
+                                href={node.link}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <strong>{node.name}</strong>
+                              </a>
                             </div>
-                            <div className="column has-text-right">
+                            <div className="subtitle">
                               <strong>
                                 {dayOfWeek}&nbsp;{month},{day}, {year} at&nbsp;
                                 {time}
                               </strong>
                             </div>
                           </div>
-                          <div className="columns">
-                            <div className="column">
-                              <p
-                                dangerouslySetInnerHTML={{
-                                  __html: node.description,
-                                }}
-                              />
+                          <div className="tile is-child is-vertical is-12">
+                            <p
+                              dangerouslySetInnerHTML={{
+                                __html: node.description,
+                              }}
+                            />
+                          </div>
+                        </div>
+                        <div className="tile">
+                          <div className="tile is-child is-8">
+                            <div className="title is-size-5 has-text-dark has-text-centered">
+                              Location
                             </div>
-                            <div className="column">
-                              <div className="content">
-                                <div className="title is-5 has-text-dark has-text-right">
-                                  Location
-                                </div>
-                                <a
-                                  title="Click For Directions"
-                                  aria-label="Directions"
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  href={`${directions}`}
-                                >
-                                  <ul className="has-text-right event-address">
-                                    <li className="list-item">
-                                      {node.venue.name}
-                                    </li>
-                                    <li className="list-item">
-                                      {node.venue.address_1}
-                                    </li>
-                                    <li className="list-item">
-                                      {node.venue.city},&nbsp;
-                                      {node.venue.state}&nbsp;
-                                      {node.venue.zip}
-                                    </li>
-                                  </ul>
-                                </a>
-                              </div>
-                            </div>
+                            <a
+                              title="Click For Directions"
+                              aria-label="Directions"
+                              target="_blank"
+                              rel="noreferrer"
+                              href={`${directions}`}
+                            >
+                              <ul className="has-text-centered event-address">
+                                <li className="list-item">{node.venue.name}</li>
+                                <li className="list-item">
+                                  {node.venue.address_1}
+                                </li>
+                                <li className="list-item">
+                                  {node.venue.city},&nbsp;
+                                  {node.venue.state}&nbsp;
+                                  {node.venue.zip}
+                                </li>
+                              </ul>
+                            </a>
                           </div>
                         </div>
                       </div>
