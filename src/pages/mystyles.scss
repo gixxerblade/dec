@@ -176,7 +176,7 @@ $title-color: #fff;
 
 /* Media queries */
 @media screen and (max-width: 768px) {
-  .success-video:after {
+  body .success-video:after {
     content: "";
     position: fixed;
     top: 0;
@@ -185,6 +185,7 @@ $title-color: #fff;
     left: 0;
     right: 0;
     z-index: -1;
+    background-image: url("../images/ridedowneast.gif");
     background: url("../images/ridedowneast.gif") no-repeat center center fixed;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -194,6 +195,9 @@ $title-color: #fff;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: hidden;
+    background-attachment: scroll;
+    -webkit-backface-visibility: hidden;
   }
 }
 @media screen and (max-width: 1024px) {
