@@ -176,7 +176,7 @@ $title-color: #fff;
 
 /* Media queries */
 @media screen and (max-width: 768px) {
-  body .success-video:after {
+  .success-video:after {
     content: "";
     position: fixed;
     top: 0;
@@ -196,8 +196,6 @@ $title-color: #fff;
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
-    background-attachment: scroll;
-    -webkit-backface-visibility: hidden;
   }
 }
 @media screen and (max-width: 1024px) {
