@@ -73,6 +73,17 @@ const Hendo = () => {
           </p>
           <Maps location={location} />
         </div>
+        <br />
+        <div className="columns">
+          <div className="column has-text-centered">
+            <a
+              href="https://downeastcyclists.s3.amazonaws.com/henderson-hendo-pond-trail.gpx"
+              download
+            >
+              Download Hendo GPX File
+            </a>
+          </div>
+        </div>
         <div className="container">
           <div className="heading p-3 is-size-4 has-text-centered is-uppercase">
             directions:
