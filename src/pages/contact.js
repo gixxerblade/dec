@@ -148,7 +148,7 @@ const Contact = () => {
                       name="singlebutton-0"
                       className="button is-success"
                     >
-                      Button
+                      Submit
                     </button>
                   </div>
                 </div>
