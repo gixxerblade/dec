@@ -1,11 +1,12 @@
 import React from "react"
 import Dec from "../icons"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Link } from "gatsby"
+
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <Seo title="404: Not found" />
     <br />
     <br />
     <div className="section">

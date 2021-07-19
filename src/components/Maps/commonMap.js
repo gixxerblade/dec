@@ -7,7 +7,7 @@ const isClient = typeof window !== "undefined"
 
 const CommonMap = ({ location }) => {
   const [zoomLevel, setZoomLevel] = useState(17.2)
-  const [dimensions, setDimensions] = useState(useWindowDimensions())
+  const dimensions = useWindowDimensions()
   const changeZoomLevel = width => {
     if (width < 415) setZoomLevel(14.6)
     if (width < 1025 && width > 414) setZoomLevel(15.5)

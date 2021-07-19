@@ -65,9 +65,10 @@ const Blog = ({ pageContext }) => {
     {
       contentfulAsset(file: { fileName: { eq: "hungry_toad-48.jpg" } }) {
         id
-        fixed(width: 300) {
-          ...GatsbyContentfulFixed
-        }
+        gatsbyImageData(
+          width: 300
+          placeholder: BLURRED
+          )
         title
       }
     }
