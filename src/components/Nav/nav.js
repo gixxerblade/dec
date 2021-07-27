@@ -64,7 +64,7 @@ const Nav = ({ siteTitle }) => {
           <Link className="navbar-item" to="/blog">
             News
           </Link>
-          <div className="navbar-item has-dropdown is-hoverable">
+          <div className="navbar-item has-dropdown is-hoverable z-index">
             <Link to="/trails" className="navbar-link">
               MTB Trails
             </Link>
