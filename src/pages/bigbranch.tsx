@@ -68,8 +68,8 @@ const BigBranch: FC = ({}) => {
               park will also feature a cross-country running section.
             </p>
             <p>
-              Big Branch Bike Park features a 1.5 mile beginner double flow
-              track (Inner Loop) and a 4.5 mile intermediate single-track (Outer
+              Big Branch Bike Park features a 1.6 mile beginner double flow
+              track (Inner Loop) and a 4.6 mile intermediate single-track (Outer
               Loop).
             </p>
             <p>
