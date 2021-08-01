@@ -36,7 +36,7 @@ const Hendo = () => {
       <PageHeader title="Henderson Pond" />
       <div className="section">
         <div className="container">
-          <figure className="image hendo-title">
+          <figure className="image title-image">
             <Img fluid={data.hendo.fluid} />
           </figure>
           <br />

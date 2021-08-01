@@ -9,6 +9,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -58,16 +59,16 @@ module.exports = {
         groupUrlName: "Down-East-Cyclists",
         // Optional parameters for retrieving Events, see full documentation at
         // https://www.meetup.com/meetup_api/docs/:urlname/events/?uri=%2Fmeetup_api%2Fdocs%2F%3Aurlname%2Fevents%2F#list
-        status: "upcoming",
-        desc: "false",
-        page: 100,
-        /* eventOptions: [
+        // status: "upcoming",
+        // desc: "false",
+        // page: 100,
+        eventOptions: [
           {
             status: `upcoming`,
             desc: `true`,
             page: 100,
           },
-        ], */
+        ],
       },
     },
     {

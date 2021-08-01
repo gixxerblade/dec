@@ -8,7 +8,7 @@ const isClient = typeof window !== "undefined"
 //src/hooks/useFetch.js
 const Maps = ({ location }) => {
   // useWindowDimensions custom hook to change zoom level
-  const [dimensions, setDimensions] = useState(useWindowDimensions())
+  const dimensions = useWindowDimensions()
 
   // ? set map as HYBRID
   const getOptions = maps => {
