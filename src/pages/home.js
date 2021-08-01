@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -49,7 +49,7 @@ const Home = () => {
         </div>
       </div>
       <Layout>
-        <SEO title="Home" />
+        <Seo title="Home" />
         <div className="hero is-fullheight">
           <div className="hero-body is-centered">
             <div className="home-content-box"></div>

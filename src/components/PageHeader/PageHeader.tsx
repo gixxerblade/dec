@@ -1,8 +1,12 @@
-import React from "react"
+import React, { FC, HTMLAttributes } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
-function PageHeader({ title }) {
+type PageHeaderProps = {
+  title: string;
+}
+
+const PageHeader: FC<PageHeaderProps & { className: string }> = ({ title }) => {
   const data = useStaticQuery(graphql`
     query {
       headerImage: file(relativePath: { eq: "group.jpeg" }) {
