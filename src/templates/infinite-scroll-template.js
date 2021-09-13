@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 const InfiniteScroll = ({ pageContext: { events } }) => {
   const [hasMore, setMore] = useState(events.length > 10)
   const [currentList, addToList] = useState([...events.slice(0, 10)])
+  const [data, setData] = useState({})
   const loadEdges = () => {
     const currentLength = currentList.length
     const more = currentLength < events.length
@@ -25,6 +26,14 @@ const InfiniteScroll = ({ pageContext: { events } }) => {
   }
 
   useEffect(() => {
+    const fetchData = async () => {
+      const results = await fetch("/.netlify/functions/meetup", {})
+      setData(await results.json())
+    }
+    fetchData()
+  }, [])
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
@@ -33,7 +42,7 @@ const InfiniteScroll = ({ pageContext: { events } }) => {
   }, [hasMore, currentList])
 
   const GOOGLE_DIRECTIONS = "https://www.google.com/maps/search/?api=1&query="
-
+  console.log(data)
   return (
     <>
       <div className="section">
