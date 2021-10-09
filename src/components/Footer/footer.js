@@ -18,7 +18,7 @@ const friends = [
   {
     title: "Bicycle Shop",
     icon: <BicycleShop />,
-    link: "https://www.thebicycleshop.com",
+    link: "https://www.thebicycle.com",
   },
   {
     title: "Cape Fear Cyclists",
