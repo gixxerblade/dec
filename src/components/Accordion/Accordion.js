@@ -26,9 +26,9 @@ export const useAccordion = sectionSlug => {
   }
 }
 
-function Accordion({ accordionId, singlePanel, children }) {
+const Accordion = ({ accordionId, singlePanel, children }) => {
   const [openSections, setOpenSections] = useState({})
-  const isOpen = sectionSlug => Boolean(openSections[sectionSlug])
+  const isOpen = sectionSlug => !!(openSections[sectionSlug])
   const onClick = useCallback(
     sectionSlug => {
       setOpenSections({

@@ -1,39 +1,3 @@
-const buildAllEvents = async (graphql, createPage, infiniteScrollTemplate) => {
-  const allMeetupEvents = await graphql(`
-    query {
-      allMeetupEvent(sort: { order: ASC, fields: time }) {
-        edges {
-          node {
-            id
-            time
-            description
-            local_date
-            local_time
-            name
-            link
-            duration
-            venue {
-              address_1
-              city
-              name
-              state
-              zip
-            }
-            status
-          }
-        }
-      }
-    }
-  `)
-  createPage({
-    path: "/allevents",
-    component: infiniteScrollTemplate,
-    context: {
-      events: allMeetupEvents.data.allMeetupEvent.edges,
-    },
-  })
-}
-
 const buildAllBlogPostList = async graphql => {
   const allBlogPostList = await graphql(`
     query {
@@ -172,7 +136,6 @@ const buildIndividualBlogPostPage = async ({
 }
 
 module.exports = {
-  buildAllEvents,
   buildAllBlogPostList,
   buildPaginatedPages,
   buildIndividualBlogPostPage,

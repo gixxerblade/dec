@@ -4,10 +4,10 @@ import { useAccordion } from "./Accordion"
 import { Plus } from "@styled-icons/boxicons-regular/Plus"
 import { Minus } from "@styled-icons/boxicons-regular/Minus"
 
-function Panel({ body, title, id }) {
+const Panel = ({ body, title, id }) => {
   const { onClick, isOpen, accordionId } = useAccordion(id)
 
-  function toggle(e) {
+  const toggle = (e) => {
     if (e.keyCode === 13 || e.type === "click") {
       onClick(id)
     }

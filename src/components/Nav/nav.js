@@ -58,9 +58,14 @@ const Nav = ({ siteTitle }) => {
               </Link>
             </div>
           </div>
-          <Link className="navbar-item" to="/events">
+          <a 
+            className="navbar-item"
+            href="https://www.meetup.com/Down-East-Cyclists/events/calendar/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Events
-          </Link>
+          </a>
           <Link className="navbar-item" to="/blog">
             News
           </Link>

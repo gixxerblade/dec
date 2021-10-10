@@ -1,23 +1,18 @@
+const { calendar } = require("../libs/calendar");
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-const fetch = require('node-fetch')
-const MEETUP_API_ENDPOINT = 'https://api.meetup.com/Down-East-Cyclists/'
+const ENDPOINT = 'https://calendar.google.com/calendar/ical/ar3ko14lv0eeeg9uqmnqktlg49pahtmb%40import.calendar.google.com/public/basic.ics';
 
-const query = ``
 
-const handler = async (event, context, callback) => {
-  let page = 0
+exports.handler = async (_event, _context, _callback) => {
+  let response
   try {
-    const response = await fetch(`${MEETUP_API_ENDPOINT}`)
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: `Hello ${subject}` }),
-      // more keys you can return:
-      // headers: { "headerName": "headerValue", ... },
-      // isBase64Encoded: true,
-    }
+    response = await calendar(ENDPOINT)
   } catch (error) {
     return { statusCode: 500, body: error.toString() }
   }
+  return {
+    statusCode: 200,
+    body: JSON.stringify(response),
+    data: JSON.stringify(response),
+  }
 }
-
-module.exports = { handler }

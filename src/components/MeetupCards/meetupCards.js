@@ -1,16 +1,41 @@
-import React from "react"
+import React, { useState, useEffect, useCallback } from "react"
 
 export const MeetUpCards = ({ events }) => {
-  const GOOGLE_DIRECTIONS = "https://www.google.com/maps/search/?api=1&query="
+  const [hasMore, setMore] = useState(events.length > 10)
+  const [currentList, addToList] = useState([...events.slice(0, 10)])
+
+  const loadEdges = useCallback(() => {
+    const currentLength = currentList.length
+    const more = currentLength < events.length
+    const nextEdges = more
+      ? events.slice(currentLength, currentLength + 10)
+      : []
+    setMore(more)
+    addToList([...currentList, ...nextEdges])
+  }, [currentList, events])
+
+  const handleScroll = useCallback(() => {
+    if (!hasMore) return
+    else if (
+      window &&
+      window.innerHeight + document.documentElement.scrollTop >=
+        document.documentElement.offsetHeight - 100
+    ) {
+      loadEdges()
+    }
+  }, [hasMore, loadEdges])
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [hasMore, currentList, handleScroll])
+
   return (
     <>
-      {events.map(event => {
-        const address1 = `${event.node.venue.address_1.split(" ").join("+")}`
-        const city = `${event.node.venue.city}`
-        const state = `${event.node.venue.state}`
-        const zip = `${event.node.venue.zip}`
-        const directions = `${GOOGLE_DIRECTIONS}${address1}%7c${city}%7c${state}%7c${zip}`
-        const dateObject = new Date(event.node.time)
+      {currentList.map((event, idx) => {
+        const dateObject = new Date(event.startTime)
         const dayOfWeek = dateObject.toLocaleString("en-US", {
           weekday: "long",
         })
@@ -21,56 +46,26 @@ export const MeetUpCards = ({ events }) => {
           timeStyle: "short",
         })
         return (
-          <div key={event.node.id} className="section">
+          <div key={`${event.id}${idx}`} className="section">
             <div className="box radius-large">
               <div className="media-content">
                 <div className="content">
-                  <div className="columns">
-                    <div className="column title is-4 has-text-dark">
-                      <strong>{event.node.name}</strong>
-                    </div>
-                    <div className="column has-text-right">
+                  <div className="columns is-centered">
+                    <a
+                      href={event.url}
+                      className="column is-half title is-4 has-text-link m-2"
+                      title="Link to Meetup"
+                      aria-label="Link to Meetup"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <strong>{event.title}</strong>
+                    </a>
+                    <div className="column has-text-right m-2">
                       <strong>
                         {dayOfWeek}&nbsp;{month},{day}, {year} at&nbsp;
                         {time}
                       </strong>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column">
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: event.node.description,
-                        }}
-                      />
-                    </div>
-                    <div className="column">
-                      <div className="content">
-                        <div className="title is-5 has-text-dark has-text-right">
-                          Location
-                        </div>
-                        <a
-                          title="Click For Directions"
-                          aria-label="Directions"
-                          target="_blank"
-                          rel="noreferrer"
-                          href={`${directions}`}
-                        >
-                          <ul className="has-text-right event-address">
-                            <li className="list-item">
-                              {event.node.venue.name}
-                            </li>
-                            <li className="list-item">
-                              {event.node.venue.address_1}
-                            </li>
-                            <li className="list-item">
-                              {event.node.venue.city},&nbsp;
-                              {event.node.venue.state}&nbsp;
-                              {event.node.venue.zip}
-                            </li>
-                          </ul>
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </div>
