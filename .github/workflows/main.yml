@@ -1,5 +1,5 @@
 name: Trigger Netlify Build
-# on:
+on: [push, pull_request]
   # schedule:
     # Run daily at 0100
     # - cron: "0 1 * * *"
