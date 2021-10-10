@@ -33,12 +33,12 @@ const Home = () => {
     <>
     <Modal />
       <div viewport-fit="cover" className="hero is-fullheight success-video">
-        <div className="hero-video">
+        <div className="image is-16by9">
           <video
             onPlay={play}
             ref={videoRef}
             type="video/mp4"
-            className="hero-body"
+            className="has-ratio"
             muted
             autoPlay
             loop
