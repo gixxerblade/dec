@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { FacebookCircle, Instagram } from "@styled-icons/boxicons-logos"
 import styled from "styled-components"
 import {
@@ -91,7 +92,7 @@ const Footer = () => {
             </h1>
             <div className="has-text-centered">
               <iframe
-              title="Strava Club Mileage"
+                title="Strava Club Mileage"
                 height="160"
                 width="300"
                 allowtransparency="true"
@@ -104,7 +105,9 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <h2 className="heading">
-            &copy;{new Date().getFullYear()} Down East Cyclists
+            <Link to="/dashboard">
+              &copy;{new Date().getFullYear()} Down East Cyclists
+            </Link>
           </h2>
         </div>
       </footer>

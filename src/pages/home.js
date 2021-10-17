@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect } from "react"
 import Layout from "../components/layout"
 import Modal from '../components/Modal/modal'
 import Seo from "../components/seo"
