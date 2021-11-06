@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import { MeetUpCards } from "../components/MeetupCards/meetupCards"
 import PageHeader from "../components/PageHeader/PageHeader"
-import { Link } from "gatsby"
 
 const Events = () => {
   const [events, setEvents] = useState([])

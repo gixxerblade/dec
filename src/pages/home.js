@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import Layout from "../components/layout"
+import Modal from '../components/Modal/modal'
 import Seo from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 const Home = () => {
@@ -22,16 +23,15 @@ const Home = () => {
 
   useEffect(() => {
     let current = true
-
     if (current) {
       play()
     }
-
     return () => (current = false)
   })
 
   return (
     <>
+    <Modal />
       <div viewport-fit="cover" className="hero is-fullheight success-video">
         <div className="image is-16by9">
           <video
