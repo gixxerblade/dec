@@ -9,7 +9,7 @@ import Events from "./events"
 import Trails from "./trails"
 import Hendo from "./hendo"
 import Commons from "./commons"
-import Dashboard from "./dashboard"
+import Dashboard from "./dashboard/[...]"
 import "./mystyles.scss"
 
 const IndexPage = () => (
@@ -20,7 +20,7 @@ const IndexPage = () => (
     <ByLaws path="/bylaws" />
     <Privacy path="/privacy" />
     <Events path="/events" />
-    <Dashboard path="/dashboard/*" />
+    <Dashboard path="dashboard/*" />
     <Trails path="/trails">
       <Hendo path="/hendo" />
       <Commons path="/commons" />

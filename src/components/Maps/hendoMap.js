@@ -5,7 +5,6 @@ import hendo from "../../objects/hendo.json"
 
 const isClient = typeof window !== "undefined"
 
-//src/hooks/useFetch.js
 const Maps = ({ location }) => {
   // useWindowDimensions custom hook to change zoom level
   const dimensions = useWindowDimensions()
