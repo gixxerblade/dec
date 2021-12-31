@@ -80,9 +80,9 @@ const Nav = ({ siteTitle }) => {
               <Link className="navbar-item dropdowns-a" to="/hendo">
                 Hendo
               </Link>
-              <Link className="navbar-item dropdowns-a" to="/commons">
+{/*               <Link className="navbar-item dropdowns-a" to="/commons">
                 Commons
-              </Link>
+              </Link> */}
             </div>
           </div>
           <Link className="navbar-item" to="/contact">

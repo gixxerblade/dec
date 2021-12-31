@@ -40,8 +40,8 @@ const Hendo = () => {
             <Img fluid={data.hendo.fluid} />
           </figure>
           <br />
-          <div className="columns">
-            <div className="column has-text-centered p-1">
+          <div className="has-text-centered	">
+{/*             <div className="column has-text-centered p-1">
               <iframe
                 className="has-text-centered"
                 title="trail conditions"
@@ -55,7 +55,7 @@ const Hendo = () => {
                 scrolling="no"
               ></iframe>
             </div>
-            <p className="p-3 has-text-justified column  is-three-fifths is-size-5">
+ */}            <p className="p-3 has-text-justified is-three-fifths is-size-5">
               Henderson Pond Trail is on board Camp LeJeune and was born with a
               MOA (Memorandum of Agreement) between Down East Cyclists and Camp
               LeJeune. The agreement authorized the club to build biking/hiking
