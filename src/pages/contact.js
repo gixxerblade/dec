@@ -10,7 +10,7 @@ const encode = data => {
 }
 
 const Contact = () => {
-  const [state, setState] = useState({})
+  const [state, setState] = useState({});
 
   const handleChange = e => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="container has-text-centered">
           <h1 className="title has-text-dark has-text-centered">Contact Us</h1>
           <div className="columns">
-            <div className="column"></div>
+            <div className="column" />
             <div className="column is-three-fifths">
               <form
                 className="form-horizontal"
@@ -76,7 +76,7 @@ const Contact = () => {
                         name="name"
                         id="name"
                         type="text"
-                        placeholder="Peter Sagan"
+                        placeholder="Tadej Pogačar"
                         className="input is-large"
                         onChange={handleChange}
                         required
@@ -96,7 +96,7 @@ const Contact = () => {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="name@someemail.com"
+                        placeholder="info@tadejpogacar.com"
                         className="input is-large"
                         required
                         onChange={handleChange}
@@ -116,11 +116,11 @@ const Contact = () => {
                         strings={[
                           "How can I join the club?",
                           "Where do you meet?",
-                          "How can I join the club?",
                           "When is the next group event?",
                           "Do I have to be a member to join you on rides?",
                           "Do your members ride mountain bikes?",
                           "Can I join your rides on a mountain/cruiser/hybrid bike?",
+                          "Who holds the KOM for French Creek Burger Run?",
                           "I have a question...",
                         ]}
                         typeSpeed={30}
@@ -154,7 +154,7 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-            <div className="column"></div>
+            <div className="column" />
           </div>
         </div>
       </div>

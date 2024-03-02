@@ -39,7 +39,6 @@ const Membership = () => {
               years:
             </h4>
             <ul>
-              <li>18km Road Time Trial</li>
               <li>Coastal Carolina Off-Road Series</li>
               <li>Centuries</li>
               <li>Group rides</li>
@@ -50,25 +49,34 @@ const Membership = () => {
               <li>Various charity events</li>
               <li>Croatan Buck Fifty aid station</li>
               <li>Hope for the Warriors Cyclist Support</li>
+              <li>Trail cleanup days at Big Branch</li>
             </ul>
+              <span>...and more</span>
           </div>
         </div>
-        <div className="container mt-3">
+        <div className="content mt-3">
           <h3 className="title has-text-dark is-size-3">
             Initial Dues / Membership Renewal
           </h3>
           <p>
-            Dues can be renewed online&nbsp;
+            <span>👉👉👉&nbsp;</span>
             <a
+              className="has-text-weight-bold	is-underlined"
               rel="noreferrer noopener"
               target="_blank"
               href="https://www.bikereg.com/down-east-cyclists-membership0"
             >
-              HERE
+              Dues can be renewed online here
             </a>
-            &nbsp;at at only $20 dollars per individual or $30 a year per
-            family! Don’t forget to provide your information and sign your
-            release. Forms available at The Bicycle Shop or the Bicycle Gallery,
+            <span>&nbsp;👈👈👈</span>
+          </p>
+          <p>
+            Cost is $30 dollars per individual or $50 a year per
+            family!
+          </p>
+          <p>
+            Don’t forget to provide your information and sign your online
+            release. Additionally, forms are available at The Bicycle Shop, Bicycle Gallery, or
             club meetings.
           </p>
         </div>
@@ -77,17 +85,3 @@ const Membership = () => {
   )
 }
 export default Membership
-/* 
-18km Road Time Trial,
-Coastal Carolina Off-Road Series,
-Centuries,
-Group rides,
-Mountain Bike Camping Trips,
-Social Gatherings,
-Community Involvement,
-Wounded Warrior Battalion weekly rides
-Various charity events.
-Croatan Buck Fifty aid station
-Hope for the Warriors Cyclist Support
-
-*/
