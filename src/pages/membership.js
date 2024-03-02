@@ -50,6 +50,9 @@ const Membership = () => {
               <li>Croatan Buck Fifty aid station</li>
               <li>Hope for the Warriors Cyclist Support</li>
               <li>Trail cleanup days at Big Branch</li>
+              <li>Take a Kid Moutain Biking</li>
+              <li>Annual community New Year’s Day Ride</li>
+              <li>USO NC Coastal Team’s Outdoor Adventures Program</li>
             </ul>
               <span>...and more</span>
           </div>
