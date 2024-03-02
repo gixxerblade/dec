@@ -1,477 +1,351 @@
 import React from 'react'
 
+const boldSpan = (text) => <span className="has-text-weight-bold">{text}</span>;
+
 export const bylaws = [
   {
-    title: () => <>ARTICLE I. Organization Name and Objective</>,
+    title: () => <>Article I. Organization Name</>,
     body: () => (
-      <>
-        <p>The name of this organization shall be Down East Cyclists.</p>
-        <br />
-        <p>
-          The objective of this organization shall be to establish a group of
-          like-minded people, promoting safe cycling for everyone.
-        </p>
-        <br />
-        <p>
-          “Road, Mountain, Touring & Triathlon; If it involves a Bike, We’re
-          Involved!”.
-        </p>
-      </>
+      <p>The name of the organization shall be the Down East Cyclist {boldSpan('(DEC)')}.</p>
     ),
     id: "Section 1",
   },
   {
-    title: () => <>ARTICLE II. – Members</>,
+    title: () => <>Article II – Organization Purpose</>,
     body: () => (
-      <>
-        <div className="content">
-          <ol type="1">
-            <li>
-              Any persons 18 years of age or older shall be eligible for
-              membership. Members under the age of 18 must be part of a Family
-              Membership and accompanied by at least one parent or guardian at
-              club events. No person shall be discriminated against because of
-              race, color, creed, sex, age, disability, or national origin,
-              sexual orientation, or otherwise subjected to unlawful
-              discrimination.
-            </li>
-            <li>
-              Annual dues shall be 30 dollars per family, per year. The
-              <strong>Treasurer</strong> will log and track all active paid
-              members and their annual due date.
-            </li>
-            <li>
-              No income derived from the activities of the club shall accrue to
-              individual members except as reimbursements for club related
-              expenses.
-            </li>
-          </ol>
-        </div>
-      </>
+      <p className="content">
+        {boldSpan('DEC')} is dedicated to promoting and supporting recreational and competitive cycling activities. Our
+        organization aims to educate cyclists in various areas of the sport of cycling, while also promoting safe
+        cycling practices. <span className="is-italic">We actively encourage and support the development of public cycling facilities and
+        programs, including bike paths, bike trails, educational courses, the local National Interscholastic Cycling
+        Association Mountain Bike Team, and other public cycling activities.</span> Through these initiatives, {boldSpan('DEC ')} 
+        strives to foster a vibrant cycling community and create opportunities for cyclists of all levels to enjoy
+        and excel in the sport.
+      </p>
     ),
-    id: "Section 2",
+    id: 'Section 2',
   },
   {
-    title: () => (
-      <>ARTICLE III. – Organization Officers Nomination and Selection</>
-    ),
+    title: () => <>Article III – Membership</>,
     body: () => (
       <>
         <div className="content">
-          <ol type="1">
+          <p>
+            Membership is open to individuals and families who desire to promote the purposes of {boldSpan('DEC')} in the
+            following categories:
+          </p>
+          <ul>
             <li>
-              The officers of the organization shall be a President,
-              Vice-President, Secretary, and Treasurer. The officers shall
-              perform the duties prescribed by these bylaws and by the
-              parliamentary authority adopted by the organization.
+              Individual Dues: $30/year or as recommended by the Executive Board
             </li>
             <li>
-              The officers shall be elected by the membership to serve for one
-              year or until their successors are elected, and their term of
-              office shall begin January 1st of the new year.
+              Family Dues: $50/year or as recommended by the Executive Board (A family is defined as
+              two or more people – including children under 18 years old – residing at the same
+              residence.)
             </li>
-            <li>No member shall hold more than one office at a time.</li>
-          </ol>
+          </ul>
+          <p>
+            {boldSpan('DEC')}  is committed to creating an inclusive and welcoming environment for all individuals. No person
+            joining {boldSpan('DEC')}  shall be discriminated against because of race, color, creed, sex, age, disability, national
+            origin, sexual orientation, or any other protected status. We are dedicated to ensuring that all members,
+            participants, and volunteers are treated with respect and dignity, promoting equality and fairness within
+            our organization and the broader cycling community.
+          </p>
+          <p>
+            The Treasurer will log and track all active paid members and their annual due dates.
+          </p>
+          <p>
+            The Secretary will provide a monthly report of all active members to local businesses that support club
+            discounts.
+          </p>
+          <p>
+            {boldSpan('DEC')}  maintains transparent financial practices and ensures that any reimbursements provided to
+            individual members for club-related expenses are reasonable and documented in accordance with club
+            policies and procedures. The organization is committed to responsible fiscal management and the
+            equitable distribution of resources to support the collective interests and endeavors of its members.
+          </p>
+          <p className="has-text-weight-bold is-underlined">Membership Rules</p>
+          <ul>
+            <li>Each Individual membership shall have one vote at General Meetings.</li>
+            <li>Each Family membership shall have two votes at General Meetings.</li>
+            <li>Any revisions or changes to the Membership Dues will be approved by the Executive Board
+              and presented at the next club meeting for a General Club member vote.</li>
+            <li>Each member must sign a {boldSpan('DEC')}  waiver of liability.</li>
+            <li>The membership period is valid for one year after the joining date.</li>
+            <li>Each member shall abide by applicable traffic laws, rules, and regulations while engaged in a
+              {boldSpan(' DEC')}-sponsored riding or racing activity. By adhering to these guidelines, {boldSpan('DEC')} members
+              demonstrate their commitment to promoting safe and responsible cycling practices, both
+              within the organization and in the wider community. <span className="is-italic">It is the collective responsibility of all
+              members to uphold these standards and contribute to the positive image of cycling as a
+              lawful and respectful mode of transportation and recreation.</span></li>
+            <li>No member of the {boldSpan('DEC')} shall use, distribute, or possess any illegal substance or drug while
+              engaged in any {boldSpan('DEC')}-sponsored event or activity. {boldSpan('DEC')} promotes a healthy and drug-free
+              environment for all members and participants.</li>
+            <li>Members shall not possess a concealed weapon unless they are licensed to carry as defined
+              by federal, state, or local laws. {boldSpan('DEC')}-sponsored events, including riding or racing activities,
+              are intended to be safe and inclusive for all participants. Therefore, the possession of
+              concealed weapons without proper licensing is strictly prohibited. Displaying a weapon,
+              regardless of licensing status, is not permitted during any {boldSpan('DEC')}-sponsored event or activity.
+              {boldSpan(' DEC')} values the safety and comfort of all members and participants, and the display of
+              weapons may create an environment that is intimidating or unwelcoming. By adhering to
+              these guidelines, {boldSpan('DEC')} members demonstrate their commitment to maintaining a safe and
+              inclusive environment for all. It is the responsibility of each member to comply with these
+              provisions and contribute to the positive and respectful atmosphere of {boldSpan('DEC')} events and
+              activities.</li>
+            <li>Membership may be terminated for cause for any act that is detrimental to the interests
+              and benefit of {boldSpan('DEC')} or violates any {boldSpan('DEC')} policy or procedure. Such termination shall require
+              the affirmative vote of 3/4 of the Executive Board. For each termination the Executive Board
+              shall set forth procedures, as may be appropriate under the circumstances, to ensure
+              fairness to both {boldSpan('DEC')} and to the member subject to termination.</li>
+          </ul>
         </div>
       </>
     ),
     id: "Section 3",
   },
   {
-    title: () => <>ARTICLE IV – Officer Duties and Responsibilities</>,
+    title: () => (
+      <>Article IV – Meetings</>
+    ),
     body: () => (
       <>
         <div className="content">
-          <ol type="1">
-            <li>
-              It shall be the duty of all officers to conduct the activities of
-              the organization in an efficient and businesslike manner and to
-              safeguard the interest of the PO at all times.
-            </li>
-            <li>
-              The President shall preside at club meetings. He/she shall perform
-              all other duties pertaining to his office, to include the
-              following:
-              <ol type="a">
-                <li>
-                  Submit annual requirement documentation in accordance with
-                  MCIEAST MCB CAMLEJO 5760.1 for continued operation aboard Camp
-                  Lejeune as a Private Organization (PO).
-                </li>
-                <li>
-                  Submit required documentation and request letters to the MCCS
-                  Private Organization Coordinator for any special events to be
-                  held on board Camp Lejeune.
-                </li>
-              </ol>
-            </li>
-            <li>
-              The-Vice President shall act as President in the absence of that
-              official. In the absence of both the President and Vice President
-              at any regular meeting or special meeting, one of the remaining
-              officers (Secretary or Treasurer) will preside.
-            </li>
-            <li>
-              The Secretary shall conduct all correspondence at the direction of
-              the Club or its officers, take the minutes of the meetings, make
-              an accurate record of the proceedings and perform all other duties
-              that properly pertain to this office. Specific duties pertaining
-              to the office of Secretary are:
-              <div className="content">
-                <ol type="a">
-                  <li>
-                    Ensure all organizational records containing personally
-                    identifiable Information (PII) are stored in a secure
-                    location. PII is defined as information about a club member
-                    that identifies, links, relates, or is unique to, or
-                    describes him or her, e.g., a SSN; age; rank; grade; marital
-                    status; race; salary; home/office phone numbers; other
-                    demographic, biometric, personnel, medical or financial
-                    information.
-                  </li>
-                  <li>
-                    Acquire and retain a copy of a Waiver of Liability and
-                    Assumption of Risk Agreement signed by each member. Submit a
-                    copy of the waiver agreement signed by each member of the
-                    Executive Board to the AC/S MCCS, MCB Camp Lejeune (Attn: PO
-                    Coordinator).
-                  </li>
-                  <li>
-                    Maintain a list of current organizational officers and their
-                    personal contact information. Contact information should
-                    include the name, physical address, email address, and
-                    daytime phone number of each officer. Submit, in conjunction
-                    with the organizational president the list of officers and
-                    personal contact information to the AC/S MCCS, MCB Camp
-                    Lejeune (Attn: PO Coordinator) within ten days of the
-                    officer(s) assuming the duties of that office. The listing
-                    must remain current at all times. In the event of an officer
-                    change during the organizational year, the officer listing
-                    will be revised and re-submitted to base PO Coordinator
-                    within ten days of the new officer assuming his/her new
-                    duties.
-                  </li>
-                </ol>
-              </div>
-            </li>
-            <li>
-              The Treasurer shall keep an account of all moneys received by and
-              disbursed on behalf of the Club in accordance with generally
-              accepted business practices which shall include at a minimum,
-              provisions for the following:
-              <div className="content">
-                <ol type="a">
-                  <li>
-                    Cash receipts shall be deposited in the PO’s bank account
-                    the first banking day after the day of receipt. A duplicate
-                    deposit slip, authenticated by the bank, shall be retained
-                    as evidence of deposit.
-                  </li>
-                  <li>
-                    Disbursements shall be made through the use of preprinted
-                    and pre-numbered checks. All checks or withdrawal slips must
-                    bear the signature of at least two members of the Board of
-                    Directors, one of whom shall be the Treasurer.
-                  </li>
-                  <li>
-                    Bank statements shall be reconciled with the book balance
-                    each month. Such reconciliation’s shall be accomplished in
-                    writing and shall be certified by the Treasurer and one
-                    other member of the Board.
-                  </li>
-                  <li>
-                    All receipts and disbursements shall be supported by
-                    adequate receipts, bills, invoices, and other generally
-                    accepted accounting documents. Voucher files shall be
-                    maintained for all receipts and disbursements and
-                    cross-referenced to payments or deposits. Such vouchers
-                    shall contain a brief description of the income received or
-                    expense incurred and shall be signed by the Treasurer.
-                  </li>
-                  <li>
-                    Accounting records shall be maintained on a current basis
-                    and all records and related documents preserved in such a
-                    manner as to be readily available for audits.
-                  </li>
-                  <li>
-                    If the gross annual income of the PO exceeds $2,500, an
-                    audit will be conducted by a qualified and disinterested
-                    party who is not a member of the PO. The audit will be
-                    submitted to the Assistant Chief of Staff, Marine Corps
-                    Community Services (MCCS), Marine Corps Base, Camp Lejeune
-                    (AC/S, MCCS), Attention: PO Coordinator. Additional
-                    unscheduled audits may be performed during the course of the
-                    accounting year, such as the change of Treasurer. The cost
-                    of such audits shall be borne by the PO. If the gross annual
-                    income of the PO is $2,499 or less, an internal audit will
-                    be conducted by two members of the Executive Board.
-                  </li>
-                  <li>
-                    A record of all PO property/equipment shall be maintained.
-                    This record shall describe the items of property/equipment,
-                    the date purchased and the original cost. A physical
-                    inventory shall be conducted of all PO property at least
-                    annually as of the close of the accounting year. This
-                    inventory shall be made a part of the PO official records.
-                  </li>
-                  <li>
-                    When the Treasurer is relieved, he/she shall invoice to
-                    his/her successor all funds, property, accounts and records
-                    of the PO. The successor shall receipt for them. For this
-                    purpose, a combined invoice and receipt shall be prepared in
-                    quadruplicate with all copies being signed by both parties.
-                    Distribution of the signed copies shall be as follows:
-                    <div className="content">
-                      <ol type="is-lower-roman">
-                        <li>Original – filed with financial statement</li>
-                        <li>Copy – to President</li>
-                        <li>Copy – to newly assigned Treasurer</li>
-                        <li>Copy – to relieving Treasurer</li>
-                      </ol>
-                    </div>
-                  </li>
-                </ol>
-              </div>
-            </li>
-            <li>
-              The duties of the members shall be to attend all meetings; to
-              conduct themselves in a proper and fitting manner; to uphold the
-              dignity of the PO; and to observe all regulations governing the
-              operation of the organization.
-            </li>
-          </ol>
+          <p className="has-text-weight-bold is-underlined">General Meetings</p>
+          <p>General Meetings of the members of {boldSpan('DEC')} shall be held on the second Wednesday of each month at 6:30
+            p.m. or as otherwise determined by the Executive Board. The meeting location will be determined and
+            announced by the Executive Board via an approved method, i.e., email distribution, social media,
+            website, or other electronic means.</p>
+          <p className="has-text-weight-bold is-underlined">Annual Meeting & Election of Officers</p>
+          <p>The Annual Meeting and Election of Officers shall be held at the regularly scheduled General Meeting for
+            the month of January.</p>
         </div>
       </>
     ),
     id: "Section 4",
   },
   {
-    title: () => <>ARTICLE V - Meetings</>,
+    title: () => <>Article V - Officers & Election of Officers</>,
     body: () => (
       <>
         <div className="content">
-          <ol type="1">
+          <p className="has-text-weight-bold is-underlined">Officers</p>
+          <p>The elected officers of {boldSpan('DEC')} shall be the office of President, Vice-President, Treasurer, and Secretary. The
+            four elected positions together comprise the Executive Board.</p>
+          <p>The duties of the Officers shall be:</p>
+          <ul>
             <li>
-              The regular meetings shall be held on the first Monday of each
-              quarter (Mar, Jun, Sep & Dec) unless otherwise ordered by the
-              organization.
+              <span className="has-text-weight-bold">President - </span>
+              Presides at General Meetings of {boldSpan('DEC')}; is responsible for the general
+              management and fundraising activities of {boldSpan('DEC')}; may establish policies and procedures for the
+              implementation of any {boldSpan('DEC')} activity and function.
             </li>
             <li>
-              The regular meeting in December shall be known as the annual
-              meeting and shall be for the purpose of electing officers,
-              receiving reports of officers and committees, and for any other
-              business that may arise.
+              <span className="has-text-weight-bold">Vice President – </span>
+              Assists the President in carrying out {boldSpan('DEC')} activities and serves in his
+              absence; organizes the club rides associated with New Year’s Day, Memorial Day,
+              Independence Day, Labor Day, and Thanksgiving (including submitting the start/finish
+              location and route to the club members at least 30 days in advance); and organizes the
+              December holiday party.
             </li>
             <li>
-              The officers shall be elected by the membership to serve for one
-              year or until their successors are elected, and their term of
-              office shall begin on the first day of the new year (Jan 1st).
+              <span className="has-text-weight-bold">Treasurer - </span>
+              Shall keep an account of all money received by and disbursed on behalf of the
+              Club in accordance with generally accepted business practices which shall include at a
+              minimum, provisions for the following:
+              <ul>
+                <li>Cash receipts shall be deposited in the {boldSpan('DEC')} bank account the first banking day after the
+                  day of receipt. A duplicate deposit slip, authenticated by the bank, shall be retained as
+                  evidence of deposit.</li>
+                <li>Disbursements shall be made using preprinted and pre-numbered checks. All checks or
+                  withdrawal slips must bear the signature of at least two members of the Executive
+                  Board, one of whom shall be the Treasurer.</li>
+                <li>Bank statements shall be reconciled with the book balance each month. Such
+                  reconciliations shall be accomplished in writing and shall be certified by the Treasurer
+                  and one other member of the Board.</li>
+                <li>All receipts and disbursements shall be supported by adequate receipts, bills, invoices,
+                  and other generally accepted accounting documents. Voucher files shall be maintained
+                  for all receipts and disbursements and cross-referenced to payments or deposits. Such
+                  vouchers shall briefly describe the income received or expense incurred and shall be
+                  signed by the Treasurer.</li>
+                <li>Accounting records shall be maintained on a current basis and all records and related
+                  documents preserved in such a manner as to be readily available for audits.</li>
+                <li>A record of all {boldSpan('DEC')} property/equipment shall be maintained. This record shall describe
+                  the items of property/equipment, the date purchased, and the original cost. A physical
+                  inventory shall be conducted of all {boldSpan('DEC')} property at least annually as of the close of the
+                  accounting year. This inventory shall be made a part of the {boldSpan('DEC')} official records.</li>
+                <li>When the Treasurer is relieved, he/she shall invoice to his/her successor all funds,
+                  property, accounts, and records of {boldSpan('DEC')}. The successor shall receive for them. For this
+                  purpose, a combined invoice and receipt shall be prepared in quadruplicate with all
+                  copies being signed by both parties. Distribution of the signed copies shall be as follows:
+                  <ol type="1">
+                    <li>Original – filed with a financial statement.</li>
+                    <li>Copy – to President.</li>
+                    <li>Copy – to newly assigned Treasurer.</li>
+                    <li>Copy – to relieving Treasurer.</li>
+                  </ol>
+                </li>
+              </ul>
             </li>
-            <li>No member shall hold more than one office at a time.</li>
-          </ol>
+            <li>
+              <span className="has-text-weight-bold">Secretary – </span>
+              The Secretary of the {boldSpan('DEC')} plays a crucial role in maintaining accurate records
+              and facilitating effective communication within the organization. The specific duties of
+              the Secretary include:
+              <ul>
+                <li>Record-keeping: The Secretary is responsible for taking and maintaining minutes
+                  of general meetings of {boldSpan('DEC')}. This includes accurately documenting discussions,
+                  decisions, and actions taken during the meetings.</li>
+                <li>Record Management: The Secretary ensures that all organizational records
+                  containing personally identifiable information (PII) are stored securely. PII refers
+                  to information about a club member that identifies, links, relates, or is unique to
+                  them, such as social security number, driver's license number, age, rank, grade,
+                  marital status, race, salary, home/office phone numbers, and other
+                  demographic, biometric, personnel, medical, or financial information. These
+                  records should be kept in a secure location with restricted access to protect
+                  members' privacy and comply with applicable privacy laws.</li>
+                <li>Waiver of Liability and Assumption of Risk Agreement: The Secretary acquires
+                  and retains a copy of each member's Waiver of Liability and Assumption of Risk
+                  Agreement. This agreement serves to protect {boldSpan('DEC')} and its members from legal
+                  liability and ensures that members acknowledge and understand the inherent
+                  risks associated with cycling activities.</li>
+                <li>Officer Contact Information: The Secretary maintains a comprehensive list of
+                  current organizational officers and their personal contact information. This
+                  information includes the name, physical address, email address, and daytime
+                  phone number of each organizational officer. Having up-to-date contact details
+                  allows for effective communication and collaboration among the officers.</li>
+              </ul>
+            </li>
+          </ul>
+          <p className="has-text-weight-bold is-underlined">Election of DEC Officers</p>
+          <p>{boldSpan('Annual Meeting:')} The election of {boldSpan('DEC')} officers shall take place at the Annual Meeting, which is held
+            during the General Meeting in January. During this meeting, members will have the opportunity to vote
+            on candidates for each office.</p>
+          <p>{boldSpan('Nomination Process:')} Nominations for each office will be called for at the December General Meeting. All
+            nominations, along with the nominees' names and offices, will be published on the {boldSpan('DEC')} website or
+            through other approved methods prior to the Annual Meeting.</p>
+          <p>{boldSpan('Election Procedure:')} During the Annual Meeting, officers shall be elected by a majority vote of the voting
+            members present. Each elected officer shall serve from the date of election through the next Annual
+            Meeting.</p>
+          <p>{boldSpan('Vacancies:')} In the event of a vacancy occurring during the term of any office, the President has the
+            authority to fill the vacancy by appointment. The appointment must receive the concurrence of a
+            majority vote of the voting members present at the next General Meeting following the occurrence of
+            the vacancy.</p>
+          <p>{boldSpan('Vacancy in the Office of President:')} If a vacancy occurs in the office of President, the Vice President shall
+            assume the office of President until a new President can be voted in at the next General Meeting.</p>
+          <p>{boldSpan('Limitation on Holding Multiple Offices:')} No person shall occupy more than one elected office at any one
+            time. This ensures a fair and balanced distribution of responsibilities and promotes equal opportunities
+            for participation among {boldSpan('DEC')} members.</p>
         </div>
       </>
     ),
     id: "Section 5",
   },
   {
-    title: () => <>ARTICLE VI - Voting</>,
+    title: () => <>Article VI - Personal Liability</>,
     body: () => (
       <>
         <div className="content">
-          <ol type="1">
-            <li>
-              Only members in good standing shall be allowed to vote on any
-              matter requiring a vote and they shall be entitled to only one
-              vote.
-            </li>
-            <li>There shall not be any voting by absentee or proxy.</li>
-            <li>
-              Passage of any resolution shall be a simple majority vote of those
-              voting members present.
-            </li>
-          </ol>
+          <p>
+            The collective membership dues and additional income generated by {boldSpan('DEC')} must sufficiently cover all
+            expenses, including insurance and other financial obligations. By joining {boldSpan('DEC')}, each member
+            acknowledges and accepts equal personal liability, as mandated by law, if {boldSpan('DEC')}'s assets are insufficient to
+            fully meet all liabilities and obligations. This provision ensures that members understand their shared
+            responsibility and commitment to meeting the organization's financial obligations.
+          </p>
         </div>
       </>
     ),
     id: "Section 6",
   },
   {
-    title: () => <>ARTICLE VII - Personal Liability</>,
+    title: () => <>Article VII – Dissolution</>,
     body: () => (
       <>
         <div className="content">
-          <p>
-            Total dues of all members, together with other income, shall be
-            sufficient to cover insurance and other expenses. All members
-            understand they are personally and equally liable, as provided by
-            law, if the assets of the PO are insufficient to discharge all
-            liabilities/obligations.
-          </p>
+          <p>Dissolution of the organization shall be upon the initiative of the membership.</p>
+          <p>Upon the liquidation of all indebtedness, residual assets will be disposed of as directed by the Board of
+            Directors. Any remaining funds held in the club account will be donated to a local not-for-profit charity
+            as directed by the voting membership.</p>
+          <p>If upon dissolution, liabilities exceed assets, then the excess of liabilities over assets shall be paid by the
+            membership. A member is defined as one whose name is carried on the active member's roll as of the
+            date of notification. The membership is liable for organizational debts in the event the organization’s
+            assets are insufficient to discharge liabilities. Distribution of residual funds and other assets must not
+            accrue to the benefit of any individual member or the membership as a whole.</p>
         </div>
       </>
     ),
     id: "Section 7",
   },
   {
-    title: () => <>ARTICLE VIII - Insurance and Liability</>,
+    title: () => <>Article VIII - Budget and Financial Matters</>,
     body: () => (
       <>
         <div className="content">
-          <ol type="1">
-            <li>
-              Unless waivered by the base Commanding General, the organization
-              will carry adequate and proper insurance at all times to protect
-              against public liability and property damage claims or other legal
-              actions that may arise as a result of activities of the
-              organization or one or more of its members acting on its behalf,
-              including the operation of any equipment, apparatus, or device
-              under the control and responsibility of the PO.
-            </li>
-            <li>
-              The liability insurance will be acquired at no expense to the
-              government.
-            </li>
-            <li>
-              All members of the organization will sign a Waiver of Liability
-              and Assumption of Risk Agreement.
-            </li>
-          </ol>
+          <p>
+            At the beginning of each Fiscal Year, the Treasurer and the President shall prepare a Proposed Budget
+            for all {boldSpan('DEC')} activities and submit the Proposed Budget for review by members at the Annual Meeting.
+          </p>
+          <p>The Proposed Budget shall be voted on at the Annual Meeting and if approved by a majority vote of the
+            members present, shall be the Final Budget for the Fiscal Year. The President shall have the power to
+            establish policies and procedures as needed for the implementation of the Final Budget.</p>
+          <p>The President and the Treasurer each shall have the authority to sign individual checks or utilize a debit
+            card drawn on {boldSpan('DEC')} accounts.</p>
+          <p>Any two elected officers shall have the power, without the approval of the general membership, to
+            make expenditures of $250.00 or less for extraordinary expenses that are deemed to be in the best
+            interests of {boldSpan('DEC')} and not included in the Final Budget. All other expenditures require the approval of the
+            general membership.</p>
+          <p>The {boldSpan('DEC')} fiscal year shall begin on the first day of January and shall end on the last day of December.</p>
         </div>
       </>
     ),
     id: "Section 8",
   },
   {
-    title: () => <>ARTICLE IX - Additional MCIEAST Requirements/Acknowledgements</>,
+    title: () => <>Article IX – Parliamentary Authority</>,
     body: () => (
       <>
         <div className="content">
-          <ol type="1">
-            <li>
-              The organization is not a government instrumentality and is
-              therefore not entitled to the immunities and privileges afforded
-              government agencies.
-            </li>
-            <li>
-              The PO will not compete with MCCS revenue generating businesses or
-              engage in retail activity except with the express written consent
-              of the installation commander following consultation with the
-              installation MCCS director and the MCCS Private Organization
-              Coordinator. Organizational members will not sell, distribute, or
-              possess alcoholic beverages on any MCIEAST-MCB CAMLEJ installation
-              unless authorized to do so.
-            </li>
-            <li>
-              The organization agrees to comply with all applicable fire and
-              safety regulations; environmental laws, local, state, and Federal
-              tax codes, and any other applicable statutes or regulations.
-            </li>
-            <li>
-              The organization accepts financial responsible for all taxes,
-              insurance, independent auditors, and employees/ volunteer
-              background check fees. A 50 state background check will be
-              conducted for all members working with children under the age of
-              18.
-            </li>
-            <li>
-              The organization agrees to respond to all reporting requirements
-              documented in MCIEAST-MCB CAMLEJ Order 5760.1.
-            </li>
-            <li>
-              The organization understands the importance of ensuring club
-              related activities do not appear to have official DoD sanction or
-              support. Appropriate disclaimers, as required via MCIEAST-MCB
-              CAMLEJ Order 5760.1will be utilized on all print and electronic
-              media.
-            </li>
-          </ol>
+          <p>
+            The rules contained in the current edition of Robert’s Rules of Order New Revised shall govern the
+            organization in all cases to which they are applicable, and I which they are not inconsistent with these
+            bylaws, and any special rules of order the organization may adopt.
+          </p>
         </div>
       </>
     ),
     id: "Section 9",
   },
   {
-    title: () => <>ARTICLE X - Dissolution</>,
+    title: () => <>Article X - Affiliations</>,
     body: () => (
       <>
         <div className="content">
-          <ol type="1"></ol>
-          <li>
-            Dissolution of the organization shall be upon the initiative of the
-            membership or a decision by the Commanding General, Camp Lejeune to
-            withdraw local authorization to operate aboard the Base.
-          </li>
-          <li>
-            Upon the liquidation of all indebtedness, residual assets will be
-            disposed of as directed by the Board of Directors. Any remaining
-            funds held in the club account will be donated to a local not for
-            profit charity as directed by the voting membership.
-          </li>
-          <li>
-            Upon disestablishment, the incumbent senior official shall notify
-            the Commanding General, Marine Corps Base, Camp Lejeune via the MCCS
-            PO Coordinator, of impending action with certification that all
-            indebtedness has been liquidated and residual assets disposed of. If
-            upon dissolution, liabilities exceed assets, then the excess of
-            liabilities over assets shall be paid by the membership. A member is
-            defined as one whose name is carried on the active members roll as
-            of the date of notification. The membership is liable for
-            organizational debts in the event the organization’s assets are
-            insufficient to discharge liabilities. Distribution of residual
-            funds and other assets must not accrue to the benefit of any
-            individual member or the membership as a whole.
-          </li>
+          <p>At the discretion of the Executive Board, {boldSpan('DEC')} may become an affiliate of other cycling-related
+            organizations which may include but are not limited to:
+          </p>
+          <ul>
+            <li>USA Cycling {boldSpan('(USAC)')}</li>
+            <li>North Carolina Interscholastic Cycling League {boldSpan(('(NCICL)'))}</li>
+            <li>Down East Dirt Dawgs</li>
+            <li>Southern Off-Road Bicycle Association {boldSpan('(SORBA)')}</li>
+            <li>Coastal Carolina Off-Road Series {boldSpan('(CCORS)')}</li>
+          </ul>
         </div>
       </>
     ),
     id: "Section 10",
   },
   {
-    title: () => <>ARTICLE XI - Parliamentary Authority</>,
+    title: () => <>Article XI - Amendment</>,
     body: () => (
       <>
         <div className="content">
-          <p>
-            The rules contained in the current edition of Robert’s Rules of
-            Order New Revised shall govern the organization in all cases to
-            which they are applicable, and I which they are not inconsistent
-            with these bylaws, and any special rules of order the organization
-            may adopt.
-          </p>
+          <p>Any proposed amendment shall be approved at a meeting of the Executive Board and published on the
+            {boldSpan('DEC')} website or other approved method prior to a General Meeting whereupon the proposed
+            amendment may be approved by a 2/3 majority of voting members present.</p>
         </div>
       </>
     ),
     id: "Section 11",
-  },
-  {
-    title: () => <>ARTICLE XII - Amendments of Changes</>,
-    body: () => (
-      <>
-        <div className="content">
-          <ol type="1">
-            <li>
-              Amendments or changes to these by-laws may be proposed by club
-              officers or by any member in good standing who submits a written
-              request to the President, using the exact wording of the proposed
-              change. Notice of the proposed change shall be given to the
-              membership at least ten days in advance of a business meeting
-              called to consider the change.
-            </li>
-            <li>
-              Proposed amendments or changes shall be adopted when two-thirds of
-              the voting members approve the amendment, and shall become
-              effective upon approval of the Commanding General, Marine Corps
-              Base, Camp Lejeune.
-            </li>
-            <li>
-              Any amendments or changes to this document shall be forwarded to
-              the MCCS PO Coordinator prior to implementation.
-            </li>
-          </ol>
-        </div>
-      </>
-    ),
-    id: "Section 12",
   },
 ]
